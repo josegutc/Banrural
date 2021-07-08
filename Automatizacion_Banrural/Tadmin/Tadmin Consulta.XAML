@@ -1,0 +1,127 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Tadmin_Consulta" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Cuenta" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1216,1721</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Tadmin_Consulta_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Tadmin_Consulta" sap:VirtualizedContainerService.HintSize="831,1656" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3" sap:VirtualizedContainerService.HintSize="789,1564" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="755,1275" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="False" sap:VirtualizedContainerService.HintSize="713,315" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="73, 31, 82, 19" FriendlyName="'C. Corrientes'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='1' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='C. Corrientes' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='C. Corrientes' role='menu item' automationid='' check:text='C. Corrientes' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAXCAYAAACRUrg+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVFhH7ZXblYQgDEC3YeqgDdqgDLuwiwwJII/hEZ3Nzn7knuMHYAJcIv6AIoKKFULFCqFihVCxQqhYIVSsEDfFnuCtAWPSY33o4fA0bsHpwRoL/uNEMvDF0kYMuCO1kdDn6/aIp3HiHOAED4YpNlZcI4fF07i/4D+IpapzYSk34cSlis7XRDmEuHHnbOjHHOP2JabJk+dM73iX+g1YCsD+MqfJkw5ztNcYt0j4Yp/ci9u4uMFrsbSxLCuORRGzdv1uJflwrcA8Qeh/k55jZjkwhmuz4rsVOxg/XBa92XjdpjylquihJKsc3dgsR+ovB8rju3fsr4odHeAqRzc2zRE5PV5BfAdMsQH6jLrEYTHx795voGIbV401m1tJQep2zPNeVbuYfmxdmSiXW7l8sQhtvPpUrvuzX2THNC7QjM0kIJt2Pwed1joGv47ybmCUIxVGfOYV3XNPrMJGxQqhYoVQsUKoWCFUrBAqVgSAF1XIx1eu3CgYAAAAAElFTkSuQmCC" InformativeScreenshot="1d122d36cf5b95f46dd5e2702a5e5e16.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5MDIForm' title='C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="C. Corrientes" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </If.Then>
+              <If.Else>
+                <uix:NClick ClickType="Single" DisplayName="Click 'C. de Ahorros'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="155, 31, 86, 19" FriendlyName="'C. de Ahorros'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='1' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='C. de Ahorros' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='C. de Ahorros' role='menu item' automationid='' check:text='C. de Ahorros' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAXCAYAAACLbliwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGfSURBVGhD7ZbhzYQgDEBvYeZgDdZgDLdwC44WlLYigsn1x6UvIV/0sxReK94nGSqYaCVMtBImWgkTrYSJVsJEK7Eoek/Ru+RcHT7mOytsKTif4loQsoWcL2z16uD9fNrMi95j8lku22u+F+Xeh7wUA7l9SMHL2L8TXTr50lDLvBOzR598Djr+Nv5NNHZzyNt6QX0T4KjxMXIx5H/udn4oco3BzqbHVRW90RzEOpufNkqJC8HXvPI6cxvLj8/Z5psXvXweA7CBthjoSHeKFt24BdGtFZabSEfK/Oe3Is/RCsZzF3E0Ny1K/7obCzlm7RJ+29GXAsEG6oJxztYZODobkMcFFut8jsyHyPn5muGDWkIHccAotq672xQDfntGP4p+Kh48L4qBg3atsuhKeTvnnUyKzuBrKSbOCyq/OuTCD+B+i7keHQ+dATkvRxYt+kgYz83ljeKAUWxDvm0j5kUDmJB01ilBLpRQCwRj/DHMg1URQvuFaMfHgzA2/+C53vrvYsl+7j/gV9ZEG68x0UqYaCVMtBImWgkTrYSJViGlL85dKEJTWtssAAAAAElFTkSuQmCC" InformativeScreenshot="30d2a55bf22bf63479d70417adfc7c49.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5MDIForm' title='C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="C. de Ahorros" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </If.Else>
+            </If>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="713,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 179, 239, 22" FriendlyName="'Consultas'" FullSelectorArgument="&lt;ctrl name='C. Corrientes' role='popup menu' /&gt;&lt;ctrl name='Consultas' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='C. Corrientes' role='popup menu' /&gt;&lt;ctrl name='Consultas' role='menu item' automationid='' check:text='Consultas' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPMAAAAaCAYAAABivWp1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHcSURBVHhe7dnBkYIwGEBhmuJqG14zFmABNpBeHGqRuwV4dmggS0KQhA2wZlaN/7zDN4sENl4eAay6rjPW/X5/q3FeAP+DmAEhiBkQgpgBIYgZEIKYASGIGRCCmAEhCoy5NbquTFV5tTZt8rhXaYyqaqPb1BhQrrJibrWp+4BVE+/T4eeXC2MmbLzP5XIx+/3e3G635PiWgmIeVuQo5I8gZnzO6XTKDrqcmN2qrEwz3x/yK/d4Cz6F76PT6jFW69aPxbftwznzSFMB27/TeZVq3LGN+r0vPQeQJzfosmJefT4e4nqE4sIOAwziamzU/sJgtx/RjcJ455+XtueCseQcQL7D4WCOx2NybMn3rMyJcbtKbq60fjWfVuqN4xe3PXehGFfhtTmAPOfz2ex2O/cMnRpf8j3PzLkx+2NbXQe3wGvHL233ou9gv+/aHMDzckO2Coq551e9KIY+oOFttg0rGIvCWotzYmMbVs/ZhcPNmwp49n/sceOjgJt/bY54P7DFBpwbslVWzJaLZHqZFP3OHI2FIa3EHN0WByt7uF+pxYAfL7zcM3HwoqvuzxlX5qU5gCddr9fk/r8oL2YAWYgZEIKYASGIGRCCmAEhiBkQgpgBIYgZEIKYARE68wMhjxJIXQnWNAAAAABJRU5ErkJggg==" InformativeScreenshot="5cdb61ec48f455ced30774744261cd48.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Consultas" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="713,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 149, 244, 22" FriendlyName="'De Movimientos'" FullSelectorArgument="&lt;ctrl name='Consultas' role='popup menu' /&gt;&lt;ctrl automationid='120' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Consultas' role='popup menu' /&gt;&lt;ctrl automationid='120' role='menu item' check:text='De Movimientos' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPgAAAAaCAYAAACaXZGCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIvSURBVHhe7ZhhkqQgDEa9FPfhNl7Gu3iVLi/AEiBtCEi7vTtTGr8fr9oICTjlA5xp27ZAvF6vX4XHBQD8HBAcAMNAcAAMA8EBMAwEB8AwEBwAw0BwAAwDwQEwzIUEX4KfpjAJ3Lx2+o0oNfzSadvCOrtY14V5bdtOsc7BfZP/bR4A/8jFBJcSjGXtk2s415OJF5A7iqb/NgCc48KCR9LO58NS9RuRa3gfJde7/+LjYuFvKgoEB99xbcG3NcxuCn4pcRKej/A98bkG/cp2qsP3xRhVPR5HjUnQ4uDmsFZzLNfLXoNy8mdAjvdFZjQuz7P0meNYVT7d574RPtF0507k+bf3wRO5keCqPUrXfqPvfRYvXm6SoSuo6sNtabffPw32Wm1+Fr/kxPg9pxQred95fJ37VSLzuIf5HJ+bO3g2NxC83FM7VqJ5kUWNt9QHgqZ69Smg7ifkYomrOcrrT7G4PnyOk/nUNpp7qd8ufuCJ3OcbvPNSt8gaZXGgI3RP0JEk8ZqO2iQJ/7b19XxH8Xjcv8qntg9zJ/hTQd4Dz+PCglMsX9Acj3cmVUMfm6t2VV9LQ7HzcfeWIul8Pd+jWF/3nuNsPseDuRfqxQk8kYsJLo+u8oUupBdZ9Bkd0VNMu/iRoJGqnh6v/LOqGkPm67FG8WhcHmNcj3bo6pmP5l4WtUwrPXgWFxIcAPC/geAAGAaCA2AYCA6AYSA4AIaB4AAYBoIDYBgIDoBhIDgAZtnCH6l0IySvX+VAAAAAAElFTkSuQmCC" InformativeScreenshot="f2272f0b7643cb0bec7b5182350f7597.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="De Movimientos" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ThunderRT5TextBox'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="713,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[Cuenta]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="62, 129, 113, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Consulta de Movimientos de Cuentas de Ahorros' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Consulta de Movimientos de Cuentas de Ahorros' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAXCAYAAAA1OADtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVGhD7dHBCQAhDAXRtGtX9mYD6cBFWPay4j3jDHwI5PgiM6djTVTgPtTeuyu81Ra1teYKboxxRrV6XYsaEe/FS1RgogITFZiowEQFJiowUYGJCkxUYKICExWYqMCuRSV3RF1PV3NbVKvfD9VxJipuOR8g2MjCVsiu/gAAAABJRU5ErkJggg==" InformativeScreenshot="fe6972554050f11f93812bb16d4f6ba4.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5MDIForm' title='C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="713,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Tadmin\tadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVFhHvZALroQwCEVn6S7Nnc3zYg9BpFo/805C+BQupJ8HfIV8sH/Dl0eU2+uPaetWqty6fkRbsyXXlVv3yzT5mvyu3KZeZLckk9/bzGu46BH5XbmGn+LCMe6Rexd7hIvhsSP0Ps8zvbcxMYSEfLQK3l45QCKI4rNFlLM4HCC7hQshjs9GXb3TNHkc/WKX2YiwBI+Rszws9LlQu4QNMoyYYnyMWR5/QETfZoaxIYxcKM5eb/EHBP3Umg3jgphqiCqG2EudPmr8zGJD0Dh0BDVy3qnF4xY7JTefHoEJ6vQxO/oDO4G1PPYT5Lx3luN3lIKK7XXxCCqOnl587I0ziwn8BhdQHH0ePjsi9hTLRYwNF1Bc+STSPSK+jS4HaxaKK5/EyiNOloucOy4kFFc+ifoi6vJ3loOLCMWVT+KbhQfLRVXbYcN3jpAvlntP80O4mFBc+d4Ra2pUBw1jg70jgrAMNrF6MOVr+Ro2mI/oLI9Uy3u9p9gwRwwK+gyxik+4I3ild4g7gie9n88fXV4yHiq6mwsAAAAASUVORK5CYII=" InformativeScreenshot="2299cb953748f0a4c86e12e8a9cd46fd.png" Selector="&lt;wnd app='tadmin.exe' cls='ThunderRT5MDIForm' title='C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

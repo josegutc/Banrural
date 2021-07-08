@@ -1,0 +1,215 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_COBIS" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1216,4218" sap2010:WorkflowViewState.IdRef="Login_COBIS_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="476,4033" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3" sap:VirtualizedContainerService.HintSize="434,961" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,672" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 31, 65, 19" FriendlyName="'Conexión'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='1' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Conexión' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Conexión' role='menu item' automationid='' check:text='Conexión' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAXCAYAAABdy4LVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVFhH7ZVNbsQgDIVznzkbR+iadXsCVtMzcIxsRz0At3BtfiaGuAlM0XSk+pOiCBzHj4dDluXjBpe3KygbaoqAmiKgpgioKQJqioCaIjBoSgBvDRiTL+tx5okED9ZY8G3R1U3V0m9KFGTArXlM4Jzn4z9hBTd5czpNSR1SGfIqhDC9W/tMiV3icE8OyJ1UPq3NQNxJanmPLZ5jlvd/lUc10gbcn6k+jfyukv5ozRP6TTlsURLBREWxRXyKmRKkRd4NbhaJsSSe5umZci/w59N7x2ueM6dThPjqimC+EIKNY9620/GqFsJ3n2hzH6jZwZwz5Vem/GD265uCSCJRWPr7UFEWqwQfCUx5+++d5im/3Av73PGa5/SbQsTCrNX5OVPFjgQ14/adDo1mB23wtvOgHah5wpgp/wQ1RUBNEViW9y805TMPFUJNEVBTBNSUHQDfnACb+g7j9n8AAAAASUVORK5CYII=" InformativeScreenshot="55012cf320323ae08776ff5b58fb6ac1.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5MDIForm' title='C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Conexión" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 3, 228, 22" FriendlyName="'Log on F7'" FullSelectorArgument="&lt;ctrl name='Conexión' role='popup menu' /&gt;&lt;ctrl automationid='2' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Conexión' role='popup menu' /&gt;&lt;ctrl automationid='2' role='menu item' check:text='Log on&amp;#x9;F7' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOgAAAAaCAYAAAC98xBqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF2SURBVHhe7djdlYMgEIZhmqIfuqEZerGVHBtgd1Q8kCXE9Sc7uO/Fc8MYkuOZT4eYcRwjAJ0IKKDYGtDH4/FR+Y8AUEdAAcUIKKAYAQUUI6CAYgQUUExRQEN0xkY/PK8Df0n60kSTsX6Ig7fF2sxVPn8MAQWatvWlBFaCW6sdQUCBpi19Kde4GKq1Y/oI6OCjzUYJF+o16/2OPZbv9W6tXfEkRK82BDS4y3qmg4DKehaoKWjpurI2nwv27WFcmGvfN1vOElc8DdGjpT8yxQtiHKK3bwJ8gP6ATmEqAxPccpOkZn0c1tqOPX585sUe+Kfe9IP0Vnq4X4CAElA0tftBprbyjXquTkfcFLay9rsRN9+DgOKVVj9cO94KZQEtZ/314D0FKq0/3ZDpzJiu3/onUX4NAUVLqx+kVk5mZ1MU0BNURlmgZ7cKqJwrTXEmBfrWeUDlDJDGVsHbE/dyrxEXuBkCCihGQAHFCCigGAEFFCOggFpj/AKC3wQB2aKGngAAAABJRU5ErkJggg==" InformativeScreenshot="98a7a863febe1685f303d4c37d57c98f.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Log on&#x9;F7" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="250, 30, 79, 25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAdCAYAAADW4FAcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVGhD7dVBDsUQFIVhizWxK0uxFxuwgzYGGk9vleYET47kG6Cd/KFVzrmDMBgT6IqptaaPxJgcfcMYU4/pvacG1tq2mCEEesGYQIwJxJhAS8dUSt1I+0/z0ZaNKYUp1/J5uTfDFjHL9Vm2iZk/NwtjAvGaA/EHBLRNTGk+2rIxoxQnJ+2/rY2ydMx/s2TMdLpqpPdm48kEYkwgxgRiTKCmmPEhalONGTepz2NM+uYWMw5+L/ukq86YAL8x3XECboQMv6QBiFUAAAAASUVORK5CYII=" InformativeScreenshot="97397b1ceff2248750601b8180f58f00.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5Form' title='Conexión con el Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Tadmin\tadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVFhHvZALroQwCEVn6S7Nnc3zYg9BpFo/805C+BQupJ8HfIV8sH/Dl0eU2+uPaetWqty6fkRbsyXXlVv3yzT5mvyu3KZeZLckk9/bzGu46BH5XbmGn+LCMe6Rexd7hIvhsSP0Ps8zvbcxMYSEfLQK3l45QCKI4rNFlLM4HCC7hQshjs9GXb3TNHkc/WKX2YiwBI+Rszws9LlQu4QNMoyYYnyMWR5/QETfZoaxIYxcKM5eb/EHBP3Umg3jgphqiCqG2EudPmr8zGJD0Dh0BDVy3qnF4xY7JTefHoEJ6vQxO/oDO4G1PPYT5Lx3luN3lIKK7XXxCCqOnl587I0ziwn8BhdQHH0ePjsi9hTLRYwNF1Bc+STSPSK+jS4HaxaKK5/EyiNOloucOy4kFFc+ifoi6vJ3loOLCMWVT+KbhQfLRVXbYcN3jpAvlntP80O4mFBc+d4Ra2pUBw1jg70jgrAMNrF6MOVr+Ro2mI/oLI9Uy3u9p9gwRwwK+gyxik+4I3ild4g7gie9n88fXV4yHiq6mwsAAAAASUVORK5CYII=" InformativeScreenshot="ae206b7cf2998f7db344c6e11d74ce7c.png" Selector="&lt;wnd app='tadmin.exe' cls='ThunderRT5MDIForm' title='C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Copyright" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="215, 185, 75, 23" ElementType="Button" FriendlyName="'Aceptar'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' check:text='Aceptar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVGhD7ZbbsYQgDECtinryayW04T+90IQN2EGWgCwPkX3EZa534sz5IMng5hh0p23bUPgOkcfgKU+u9655ntvy1nUVOizL0pcX18IRkcdA5DEQeQxEHoNx8qxGNSnUtpFjYxB+tvc5w+RZrRAAUGnbzPP41/IsagVoqEml0RY5anzCiQDzIuYEaQhxB5iq1hEeDt2vjqU9ABROh9/xOWPk0ZHdJRiITQdonQSlWKghCXGidkmx1pBEeiAxdzZ5lMvrcpk8hsgrhFHT9TQVTe+SMtKE5bX5urGPlxv36NQxGCDvKKM/MWcN1vF8XeVI3PNYduqY/F5eMWmB8ljWx6gVI6jxFKcPUFuQI7+nn8CbyqvfcZ5CaJDiJzLG/N+a9pT6l72PlxL8u9PFg9x8T8iE3UzedVzb+BWIPAY3kvf3EHkMRB4DkcegK4+SQp+mPAoK73GQJ3yOyPuaDR8UgMNEB+2uSwAAAABJRU5ErkJggg==" InformativeScreenshot="2ae4dec1412179adfbdcb8131cd1d3d7.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='#32770' title='Copyright' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Aceptar" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Tadmin\tadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVFhHvZALroQwCEVn6S7Nnc3zYg9BpFo/805C+BQupJ8HfIV8sH/Dl0eU2+uPaetWqty6fkRbsyXXlVv3yzT5mvyu3KZeZLckk9/bzGu46BH5XbmGn+LCMe6Rexd7hIvhsSP0Ps8zvbcxMYSEfLQK3l45QCKI4rNFlLM4HCC7hQshjs9GXb3TNHkc/WKX2YiwBI+Rszws9LlQu4QNMoyYYnyMWR5/QETfZoaxIYxcKM5eb/EHBP3Umg3jgphqiCqG2EudPmr8zGJD0Dh0BDVy3qnF4xY7JTefHoEJ6vQxO/oDO4G1PPYT5Lx3luN3lIKK7XXxCCqOnl587I0ziwn8BhdQHH0ePjsi9hTLRYwNF1Bc+STSPSK+jS4HaxaKK5/EyiNOloucOy4kFFc+ifoi6vJ3loOLCMWVT+KbhQfLRVXbYcN3jpAvlntP80O4mFBc+d4Ra2pUBw1jg70jgrAMNrF6MOVr+Ro2mI/oLI9Uy3u9p9gwRwwK+gyxik+4I3ild4g7gie9n88fXV4yHiq6mwsAAAAASUVORK5CYII=" InformativeScreenshot="864c51784098c7e8cce52c9e108c2bfb.png" Selector="&lt;wnd app='tadmin.exe' cls='#32770' title='Copyright'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3" sap:VirtualizedContainerService.HintSize="434,815" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="banrural2021">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="88, 118, 138, 19" ElementType="InputBox" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAXCAYAAADdlHeDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABiSURBVGhD7dK5DYAwAMBAhs2g2Sx0NDwRru8kb+BjzrmkvxlHqWucMYa07XEc+GIcEuOQGIfEOCTGITEOiXFIjENiHBLjkBiHxDgkxiExDolxSIxD8jqOtOs2jvQn4yg01wk2dskh6psN0QAAAABJRU5ErkJggg==" InformativeScreenshot="c018e8b92120f2ba327b15693fec0381.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5Form' title='Conexión con el Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="250, 30, 79, 25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAdCAYAAADW4FAcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVGhD7dVBDsUQAEVRizWxKzthLzZgBxoDibaq9L/gy5OcAdrJDa2w1gb6nTEmMCbIKaaUkj4qxuToG0qpekznHDXQWrfF9N7TC8YEYkwgxgRaOqYQ4qa0/zQfbdmYpTDXtXx+3Zthi5jX9Vm2iZk/NwtjAvGaA/EHBLRNzNJ8tGVjRilOrrT/tjbK0jH/zZIx0+mqKb03G08mEGMCMSYQYwI1xYwPUZtqzLhJfR5j0je3mHHwe9knXXXGBDjHNOEAPMsMaPZ9iCUAAAAASUVORK5CYII=" InformativeScreenshot="56064fa26ea936038ac6715a31fc8b2b.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5Form' title='Conexión con el Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Tadmin\tadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVFhHvZALroQwCEVn6S7Nnc3zYg9BpFo/805C+BQupJ8HfIV8sH/Dl0eU2+uPaetWqty6fkRbsyXXlVv3yzT5mvyu3KZeZLckk9/bzGu46BH5XbmGn+LCMe6Rexd7hIvhsSP0Ps8zvbcxMYSEfLQK3l45QCKI4rNFlLM4HCC7hQshjs9GXb3TNHkc/WKX2YiwBI+Rszws9LlQu4QNMoyYYnyMWR5/QETfZoaxIYxcKM5eb/EHBP3Umg3jgphqiCqG2EudPmr8zGJD0Dh0BDVy3qnF4xY7JTefHoEJ6vQxO/oDO4G1PPYT5Lx3luN3lIKK7XXxCCqOnl587I0ziwn8BhdQHH0ePjsi9hTLRYwNF1Bc+STSPSK+jS4HaxaKK5/EyiNOloucOy4kFFc+ifoi6vJ3loOLCMWVT+KbhQfLRVXbYcN3jpAvlntP80O4mFBc+d4Ra2pUBw1jg70jgrAMNrF6MOVr+Ro2mI/oLI9Uy3u9p9gwRwwK+gyxik+4I3ild4g7gie9n88fXV4yHiq6mwsAAAAASUVORK5CYII=" InformativeScreenshot="40f181da939937126bfef65882e5534e.png" Selector="&lt;wnd app='tadmin.exe' cls='ThunderRT5MDIForm' title='C.O.B.I.S. - TERMINAL ADMINISTRATIVA - 3.7.3'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Copyright" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="215, 185, 75, 23" ElementType="Button" FriendlyName="'Aceptar'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' check:text='Aceptar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVGhD7ZbbsYQgDECtinryayW04T+90IQN2EGWgCwPkX3EZa534sz5IMng5hh0p23bUPgOkcfgKU+u9655ntvy1nUVOizL0pcX18IRkcdA5DEQeQxEHoNx8qxGNSnUtpFjYxB+tvc5w+RZrRAAUGnbzPP41/IsagVoqEml0RY5anzCiQDzIuYEaQhxB5iq1hEeDt2vjqU9ABROh9/xOWPk0ZHdJRiITQdonQSlWKghCXGidkmx1pBEeiAxdzZ5lMvrcpk8hsgrhFHT9TQVTe+SMtKE5bX5urGPlxv36NQxGCDvKKM/MWcN1vF8XeVI3PNYduqY/F5eMWmB8ljWx6gVI6jxFKcPUFuQI7+nn8CbyqvfcZ5CaJDiJzLG/N+a9pT6l72PlxL8u9PFg9x8T8iE3UzedVzb+BWIPAY3kvf3EHkMRB4DkcegK4+SQp+mPAoK73GQJ3yOyPuaDR8UgMNEB+2uSwAAAABJRU5ErkJggg==" InformativeScreenshot="2ae4dec1412179adfbdcb8131cd1d3d7.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='#32770' title='Copyright' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Aceptar" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Tadmin\tadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVFhHvZALroQwCEVn6S7Nnc3zYg9BpFo/805C+BQupJ8HfIV8sH/Dl0eU2+uPaetWqty6fkRbsyXXlVv3yzT5mvyu3KZeZLckk9/bzGu46BH5XbmGn+LCMe6Rexd7hIvhsSP0Ps8zvbcxMYSEfLQK3l45QCKI4rNFlLM4HCC7hQshjs9GXb3TNHkc/WKX2YiwBI+Rszws9LlQu4QNMoyYYnyMWR5/QETfZoaxIYxcKM5eb/EHBP3Umg3jgphqiCqG2EudPmr8zGJD0Dh0BDVy3qnF4xY7JTefHoEJ6vQxO/oDO4G1PPYT5Lx3luN3lIKK7XXxCCqOnl587I0ziwn8BhdQHH0ePjsi9hTLRYwNF1Bc+STSPSK+jS4HaxaKK5/EyiNOloucOy4kFFc+ifoi6vJ3loOLCMWVT+KbhQfLRVXbYcN3jpAvlntP80O4mFBc+d4Ra2pUBw1jg70jgrAMNrF6MOVr+Ro2mI/oLI9Uy3u9p9gwRwwK+gyxik+4I3ild4g7gie9n88fXV4yHiq6mwsAAAAASUVORK5CYII=" InformativeScreenshot="89a56836ca232f2014f483294b50441f.png" Selector="&lt;wnd app='tadmin.exe' cls='#32770' title='Copyright'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Datos Generales" sap:VirtualizedContainerService.HintSize="434,907" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,618" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="315, 32, 79, 22" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAaCAYAAADL5WCkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC1SURBVGhD7dVNDsAQEIZhh7VxK3dzATdoI41GdCg6YSqf5Fn46eYNqfLeH8ADMRndMbXWMIiMidE3jDH1mM45aGCtbYsZ16AMMRkhJiPRMZVSD9R+aT6b2JhUmHwtned7K2wRM19fZZuY6blVEJMRnjkj/IAYbROTms8mNmYQ46So/be1WUTH/BuRMePtqqG+Ww03kxFiMmqKGQ5Bm2rMsAl9ijFhzCMmfHfHxBgb4alfDf1xAhDeFM+MhALIAAAAAElFTkSuQmCC" InformativeScreenshot="5266062dce4b4ae3d069603070515ea2.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='ThunderRT5Form' title='Datos Generales' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="143, 133, 75, 23" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVGhD7ZbN0YQgDECpinpy8GIltOGdXmjCBuwga0CWH5F1xWU+v4kz70CSwc0z6IplWZC5Bstr4C1vGAbmJEV5fNWvcRzr8uZ5ZgpM03ROno8xAZbXAMtrgOU10FeeUSiFRGUKuWY0ws/2LtNVnlESAQClMsV8G/9ankElATU1KRWaJEeNCxQE6A+xVZACF18BndWuuIdD98tjYQ8AiWL3O76jnzw6spsEDb5pB62DoBBzNSTBT9QmyddqkkgPxOeOJo9ycV0s8zrd5CXCqOl8mpKmN0kRYcLi2nhd2MfK9XtU6i7SSd5eRn1ijhrM4/E6y5G497Gs1DXQR14yaY70WObHqBQjqPEQpw9QWdBKfE87gQ+Vl7/jLIlQJ8VOpI/ZvzXlKbUvextPJdh35xp3cuM9IRL2MHn3cV/jd8DyGniYvL8Fy2uA5TVwSh4VMWWq8ijJ1DmUx5xjJ4/5HpZ3mQVfkf+SMQNQy7wAAAAASUVORK5CYII=" InformativeScreenshot="595a775dbb35c9976493bd28691cef94.png" ScopeSelectorArgument="&lt;wnd app='tadmin.exe' cls='#32770' title='C.O.B.I.S. - Terminal Administrativa' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Tadmin Consulta workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Tadmin Consulta.XAML">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Tadmin\tadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACxSURBVFhHzZZREoMgDEQ9eo7GzSjYrE0zKZ1aCLvOcyAGfKN+eLTUzYTFTDCQZEKBrHwUyIRPoL7h4+u29x7sAuvhE9hGWMykn56PBSmlpMAnAJBo0Ux4BcCq8An4oGE1PALdwYJEi0Z8i+/nEfAXsggFRrF9M5gmICInuuGv/P8KpgqMYvssr83wIeuPp7RaB4f2tY4TnZMJ3AEbXze+5gpEdC5t3NE5gcBmwmISR30AGTLgl8Lud5gAAAAASUVORK5CYII=" InformativeScreenshot="918862804e65c840fbbec0cb52dfaf7e.png" Selector="&lt;wnd app='tadmin.exe' cls='ThunderRT5Form' title='Datos Generales'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
