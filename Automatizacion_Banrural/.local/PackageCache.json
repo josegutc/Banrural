@@ -132,6 +132,19 @@
         "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.vision/2.2.0\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.uiautomation.activities\\20.10.6"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Word.Activities",
+        "Version": "1.5.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Propa34653\\.nuget\\packages\\docx/1.0.0.22\\lib/net40/DocX.dll",
+        "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities/1.5.3\\lib/net461/UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities/1.5.3\\lib/net461/UiPath.Word.Activities.dll",
+        "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities/1.5.3\\lib/net461/UiPath.Word.dll"
+      ],
+      "Path": "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities\\1.5.3"
     }
   ],
   "Conflicts": [],
@@ -178,6 +191,11 @@
     "DocumentFormat.OpenXml": {
       "Id": "DocumentFormat.OpenXml",
       "Version": "2.7.1",
+      "Dependencies": []
+    },
+    "DocX": {
+      "Id": "DocX",
+      "Version": "1.0.0.22",
       "Dependencies": []
     },
     "Extended.Wpf.Toolkit": {
@@ -793,6 +811,16 @@
           "Item2": "[2.7.1, )"
         }
       ]
+    },
+    "UiPath.Word.Activities": {
+      "Id": "UiPath.Word.Activities",
+      "Version": "1.5.3",
+      "Dependencies": [
+        {
+          "Item1": "DocX",
+          "Item2": "[1.0.0.18, )"
+        }
+      ]
     }
   },
   "AllPackages": [
@@ -855,6 +883,16 @@
         "C:\\Users\\Propa34653\\.nuget\\packages\\documentformat.openxml\\2.7.1\\lib\\net45\\DocumentFormat.OpenXml.dll"
       ],
       "Path": "C:\\Users\\Propa34653\\.nuget\\packages\\documentformat.openxml\\2.7.1"
+    },
+    {
+      "Package": {
+        "Id": "DocX",
+        "Version": "1.0.0.22"
+      },
+      "Assemblies": [
+        "C:\\Users\\Propa34653\\.nuget\\packages\\docx\\1.0.0.22\\lib\\net40\\DocX.dll"
+      ],
+      "Path": "C:\\Users\\Propa34653\\.nuget\\packages\\docx\\1.0.0.22"
     },
     {
       "Package": {
@@ -1359,6 +1397,18 @@
         "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.vision\\2.2.0\\lib\\net461\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.vision\\2.2.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Word.Activities",
+        "Version": "1.5.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities\\1.5.3\\lib\\net461\\UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities\\1.5.3\\lib\\net461\\UiPath.Word.Activities.dll",
+        "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities\\1.5.3\\lib\\net461\\UiPath.Word.dll"
+      ],
+      "Path": "C:\\Users\\Propa34653\\.nuget\\packages\\uipath.word.activities\\1.5.3"
     }
   ]
 }

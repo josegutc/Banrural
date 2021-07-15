@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login_Soporte_Administrativo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,4752" sap2010:WorkflowViewState.IdRef="Login_Soporte_Administrativo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Soporte_Administrativo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1216,4944" sap2010:WorkflowViewState.IdRef="Login_Soporte_Administrativo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -31,6 +31,7 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -56,9 +57,16 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="476,4647" sap2010:WorkflowViewState.IdRef="Sequence_17">
+  <Sequence sap:VirtualizedContainerService.HintSize="476,4799" sap2010:WorkflowViewState.IdRef="Sequence_17">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -153,7 +161,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="Banrural2020">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="banrural2021">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="88, 82, 138, 19" ElementType="InputBox" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAXCAYAAADdlHeDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABiSURBVGhD7dK5DYAwAMBAhs2g2Sx0NDwRru8kb+BjzrmkvxlHqWucMYa07XEc+GIcEuOQGIfEOCTGITEOiXFIjENiHBLjkBiHxDgkxiExDolxSIxD8jqOtOs2jvQn4yg01wk2dskh6psN0QAAAABJRU5ErkJggg==" InformativeScreenshot="621b19e8267c4a7f9553ef0ed7835153.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Conexión con el Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
               </uix:NTypeInto.Target>
@@ -242,5 +250,18 @@
         <uix:TargetApp FilePath="C:\Cobis3\Sadmin\saadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFtSURBVFhHzVMJbsMwDMv/X5WfraYiKdSRphiUbgSI2BQpGii6EX72fS8EntK111EMYBec0rXXUQxgF5zStddRDGAXnNK1d7ODmL4J7XWUF4LAU7r2OooB7IJTuvY6igHsghP6an/uAVgOZt3POtdeRwi4mYJ3ui023s20d+BfQIsdeg/lCdrrePtiZjf33EK7g3Sj9jrC0JYKaOYLk9/nC+Fu/qSj76g9EQN2T0H3NLrMPtTRd9SeCMXGHJzQ0aUMKOUgB3+jY6/sJh13/QrsIKYr3M07IGNk2H19A/yFTDUKs853o3k5g6/5kx7gS5jQbcZnW8jkedaBPF/ngBAiU3sHsg5mnWeWJT0gDNXQheSbi65048WugGIG80KedffsN3b6ygjsICZ87fwO5vvEe4WVDfCF/EqA75O6tBJKOdgFp/Sj9kQxgF1wStdeRzGAXXBK115HMYBdcErXXvnt7ftt/i9cvehp/S+xbS9N5/OyQZ6p1AAAAABJRU5ErkJggg==" InformativeScreenshot="392809c548ed6b7e9045da1dcc28970e.png" Selector="&lt;wnd app='saadmin.exe' cls='#32770' title='Mensaje del Servidor'/&gt;" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sadmin Operaciones workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sadmin\Sadmin Operaciones.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="ValorOperacion">
+          <Literal x:TypeArguments="x:String">500</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="CuentaCliente">
+          <Literal x:TypeArguments="x:String">3282058186</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Observacion">
+          <Literal x:TypeArguments="x:String">Reintegro por gestion numero 5363919</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>

@@ -74,6 +74,15 @@
           "lib/net45/DocumentFormat.OpenXml.dll": {}
         }
       },
+      "DocX/1.0.0.22": {
+        "type": "package",
+        "compile": {
+          "lib/net40/_._": {}
+        },
+        "runtime": {
+          "lib/net40/DocX.dll": {}
+        }
+      },
       "Extended.Wpf.Toolkit/3.8.1": {
         "type": "package",
         "compile": {
@@ -1268,6 +1277,121 @@
           "lib/net461/UiPath.Vision.Core.dll": {},
           "lib/net461/UiPath.Vision.dll": {}
         }
+      },
+      "UiPath.Word.Activities/1.5.3": {
+        "type": "package",
+        "dependencies": {
+          "DocX": "1.0.0.18"
+        },
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/UiPath.Word.Activities.Design.dll": {},
+          "lib/net461/UiPath.Word.Activities.dll": {},
+          "lib/net461/UiPath.Word.dll": {}
+        },
+        "resource": {
+          "lib/net461/de/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/de/UiPath.Word.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/de/UiPath.Word.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net461/es-MX/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es-MX/UiPath.Word.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es-MX/UiPath.Word.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net461/es/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/es/UiPath.Word.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/es/UiPath.Word.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net461/fr/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/fr/UiPath.Word.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/fr/UiPath.Word.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net461/ja/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ja/UiPath.Word.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ja/UiPath.Word.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net461/ko/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/ko/UiPath.Word.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/ko/UiPath.Word.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net461/pt-BR/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt-BR/UiPath.Word.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt-BR/UiPath.Word.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net461/pt/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/pt/UiPath.Word.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/pt/UiPath.Word.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net461/ru/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/ru/UiPath.Word.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/ru/UiPath.Word.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net461/tr/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/tr/UiPath.Word.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/tr/UiPath.Word.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net461/zh-CN/UiPath.Word.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net461/zh-CN/UiPath.Word.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net461/zh-CN/UiPath.Word.resources.dll": {
+            "locale": "zh-CN"
+          }
+        }
       }
     }
   },
@@ -1360,6 +1484,18 @@
         "lib/net45/DocumentFormat.OpenXml.xml",
         "lib/netstandard1.3/DocumentFormat.OpenXml.dll",
         "lib/netstandard1.3/DocumentFormat.OpenXml.xml"
+      ]
+    },
+    "DocX/1.0.0.22": {
+      "sha512": "F2h7b4BU3rVlscSGClU7HpE3KQPHGjDDFOh0oPY5ZcZEMfvIwUxFTZu8VcFrgS9NPdK8VhUeSLjTupPUNfjTMA==",
+      "type": "package",
+      "path": "docx/1.0.0.22",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docx.1.0.0.22.nupkg.sha512",
+        "docx.nuspec",
+        "lib/net40/DocX.dll"
       ]
     },
     "Extended.Wpf.Toolkit/3.8.1": {
@@ -2683,6 +2819,53 @@
         "uipath.vision.2.2.0.nupkg.sha512",
         "uipath.vision.nuspec"
       ]
+    },
+    "UiPath.Word.Activities/1.5.3": {
+      "sha512": "88wuuMYjcSHD0JOWgGTZRS0/kx4p3RcDjyHk7nQ2OxNkzPXjCA/4fCS8PtMLA0lRcVEqtTWiOjXwLDQYyhALnQ==",
+      "type": "package",
+      "path": "uipath.word.activities/1.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/UiPath.Word.Activities.Design.dll",
+        "lib/net461/UiPath.Word.Activities.dll",
+        "lib/net461/UiPath.Word.dll",
+        "lib/net461/de/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/de/UiPath.Word.Activities.resources.dll",
+        "lib/net461/de/UiPath.Word.resources.dll",
+        "lib/net461/es-MX/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/es-MX/UiPath.Word.Activities.resources.dll",
+        "lib/net461/es-MX/UiPath.Word.resources.dll",
+        "lib/net461/es/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/es/UiPath.Word.Activities.resources.dll",
+        "lib/net461/es/UiPath.Word.resources.dll",
+        "lib/net461/fr/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/fr/UiPath.Word.Activities.resources.dll",
+        "lib/net461/fr/UiPath.Word.resources.dll",
+        "lib/net461/ja/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/ja/UiPath.Word.Activities.resources.dll",
+        "lib/net461/ja/UiPath.Word.resources.dll",
+        "lib/net461/ko/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/ko/UiPath.Word.Activities.resources.dll",
+        "lib/net461/ko/UiPath.Word.resources.dll",
+        "lib/net461/pt-BR/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/pt-BR/UiPath.Word.Activities.resources.dll",
+        "lib/net461/pt-BR/UiPath.Word.resources.dll",
+        "lib/net461/pt/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/pt/UiPath.Word.Activities.resources.dll",
+        "lib/net461/pt/UiPath.Word.resources.dll",
+        "lib/net461/ru/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/ru/UiPath.Word.Activities.resources.dll",
+        "lib/net461/ru/UiPath.Word.resources.dll",
+        "lib/net461/tr/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/tr/UiPath.Word.Activities.resources.dll",
+        "lib/net461/tr/UiPath.Word.resources.dll",
+        "lib/net461/zh-CN/UiPath.Word.Activities.Design.resources.dll",
+        "lib/net461/zh-CN/UiPath.Word.Activities.resources.dll",
+        "lib/net461/zh-CN/UiPath.Word.resources.dll",
+        "uipath.word.activities.1.5.3.nupkg.sha512",
+        "uipath.word.activities.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -2690,7 +2873,8 @@
     ".NETFramework,Version=v4.6.1": [
       "UiPath.Excel.Activities >= 2.9.3 <= 2.9.3",
       "UiPath.System.Activities >= 20.10.1 <= 20.10.1",
-      "UiPath.UIAutomation.Activities >= 20.10.6 <= 20.10.6"
+      "UiPath.UIAutomation.Activities >= 20.10.6 <= 20.10.6",
+      "UiPath.Word.Activities >= 1.5.3 <= 1.5.3"
     ]
   },
   "packageFolders": {
@@ -2700,9 +2884,9 @@
     "restore": {
       "projectUniqueName": "Automatizacion_Banrural",
       "projectName": "Automatizacion_Banrural",
-      "projectPath": "C:\\Users\\Propa34653\\Desktop\\EY\\Automatizacion_Banrural\\.local",
+      "projectPath": "C:\\Users\\Propa34653\\Desktop\\EY\\Banrural\\Automatizacion_Banrural\\.local",
       "packagesPath": "C:\\Users\\Propa34653\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Propa34653\\Desktop\\EY\\Automatizacion_Banrural\\.local"
+      "outputPath": "C:\\Users\\Propa34653\\Desktop\\EY\\Banrural\\Automatizacion_Banrural\\.local"
     },
     "frameworks": {
       "net461": {
@@ -2721,6 +2905,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[20.10.6, 20.10.6]"
+          },
+          "UiPath.Word.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.5.3, 1.5.3]"
           }
         }
       }
@@ -2753,6 +2942,16 @@
       "warningLevel": 1,
       "message": "UiPath.Excel.Activities 2.9.3 depends on DocumentFormat.OpenXml (>= 2.5.0) but DocumentFormat.OpenXml 2.5.0 was not found. An approximate best match of DocumentFormat.OpenXml 2.7.1 was resolved.",
       "libraryId": "DocumentFormat.OpenXml",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "UiPath.Word.Activities 1.5.3 depends on DocX (>= 1.0.0.18) but DocX 1.0.0.18 was not found. An approximate best match of DocX 1.0.0.22 was resolved.",
+      "libraryId": "DocX",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.1"
       ]
@@ -2860,16 +3059,7 @@
     {
       "code": "NU1103",
       "level": "Error",
-      "message": "Unable to find a stable package Microsoft.Bcl.AsyncInterfaces with version (>= 1.1.1)\r\n  - Found 1 version(s) in C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages [ Nearest version: 5.0.0-rc.1.20451.14 ]\r\n  - Found 1 version(s) in Local [ Nearest version: 5.0.0-rc.1.20451.14 ]\r\n  - Found 1 version(s) in https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json [ Nearest version: 5.0.0-rc.1.20451.14 ]\r\n  - Found 0 version(s) in https://gallery.uipath.com/api/v2\r\n  - Found 0 version(s) in Connect\r\n  - Found 0 version(s) in https://www.myget.org/F/workflow/\r\n  - Found 0 version(s) in Official",
-      "libraryId": "Microsoft.Bcl.AsyncInterfaces",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1"
-      ]
-    },
-    {
-      "code": "NU1103",
-      "level": "Error",
-      "message": "Unable to find a stable package ClosedXML with version (>= 0.87.1)\r\n  - Found 1 version(s) in C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages [ Nearest version: 0.88.0-beta1 ]\r\n  - Found 1 version(s) in Local [ Nearest version: 0.88.0-beta1 ]\r\n  - Found 1 version(s) in https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json [ Nearest version: 0.88.0-beta1 ]\r\n  - Found 0 version(s) in https://gallery.uipath.com/api/v2\r\n  - Found 0 version(s) in Connect\r\n  - Found 0 version(s) in https://www.myget.org/F/workflow/\r\n  - Found 0 version(s) in Official",
+      "message": "Unable to find a stable package ClosedXML with version (>= 0.87.1)\r\n  - Found 1 version(s) in C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages [ Nearest version: 0.88.0-beta1 ]\r\n  - Found 1 version(s) in Local [ Nearest version: 0.88.0-beta1 ]\r\n  - Found 1 version(s) in https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json [ Nearest version: 0.88.0-beta1 ]\r\n  - Found 0 version(s) in https://api.nuget.org/v3/index.json\r\n  - Found 0 version(s) in nuget.org\r\n  - Found 0 version(s) in https://gallery.uipath.com/api/v2\r\n  - Found 0 version(s) in Connect\r\n  - Found 0 version(s) in https://www.myget.org/F/workflow/\r\n  - Found 0 version(s) in Official",
       "libraryId": "ClosedXML",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.1"
@@ -2878,7 +3068,16 @@
     {
       "code": "NU1103",
       "level": "Error",
-      "message": "Unable to find a stable package System.Threading.Channels with version (>= 4.7.1)\r\n  - Found 1 version(s) in C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages [ Nearest version: 5.0.0-preview.1.20120.5 ]\r\n  - Found 1 version(s) in Local [ Nearest version: 5.0.0-preview.1.20120.5 ]\r\n  - Found 1 version(s) in https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json [ Nearest version: 5.0.0-preview.1.20120.5 ]\r\n  - Found 0 version(s) in https://gallery.uipath.com/api/v2\r\n  - Found 0 version(s) in Connect\r\n  - Found 0 version(s) in https://www.myget.org/F/workflow/\r\n  - Found 0 version(s) in Official",
+      "message": "Unable to find a stable package Microsoft.Bcl.AsyncInterfaces with version (>= 1.1.1)\r\n  - Found 1 version(s) in C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages [ Nearest version: 5.0.0-rc.1.20451.14 ]\r\n  - Found 1 version(s) in Local [ Nearest version: 5.0.0-rc.1.20451.14 ]\r\n  - Found 1 version(s) in https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json [ Nearest version: 5.0.0-rc.1.20451.14 ]\r\n  - Found 0 version(s) in https://api.nuget.org/v3/index.json\r\n  - Found 0 version(s) in nuget.org\r\n  - Found 0 version(s) in https://gallery.uipath.com/api/v2\r\n  - Found 0 version(s) in Connect\r\n  - Found 0 version(s) in https://www.myget.org/F/workflow/\r\n  - Found 0 version(s) in Official",
+      "libraryId": "Microsoft.Bcl.AsyncInterfaces",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    },
+    {
+      "code": "NU1103",
+      "level": "Error",
+      "message": "Unable to find a stable package System.Threading.Channels with version (>= 4.7.1)\r\n  - Found 1 version(s) in C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages [ Nearest version: 5.0.0-preview.1.20120.5 ]\r\n  - Found 1 version(s) in Local [ Nearest version: 5.0.0-preview.1.20120.5 ]\r\n  - Found 1 version(s) in https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json [ Nearest version: 5.0.0-preview.1.20120.5 ]\r\n  - Found 0 version(s) in https://api.nuget.org/v3/index.json\r\n  - Found 0 version(s) in nuget.org\r\n  - Found 0 version(s) in https://gallery.uipath.com/api/v2\r\n  - Found 0 version(s) in Connect\r\n  - Found 0 version(s) in https://www.myget.org/F/workflow/\r\n  - Found 0 version(s) in Official",
       "libraryId": "System.Threading.Channels",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.1"
@@ -2887,7 +3086,7 @@
     {
       "code": "NU1101",
       "level": "Error",
-      "message": "Unable to find package System.ComponentModel.Annotations. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://gallery.uipath.com/api/v2, https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json, https://www.myget.org/F/workflow/, Local, Official",
+      "message": "Unable to find package System.ComponentModel.Annotations. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://api.nuget.org/v3/index.json, https://gallery.uipath.com/api/v2, https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json, https://www.myget.org/F/workflow/, Local, nuget.org, Official",
       "libraryId": "System.ComponentModel.Annotations",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.1"
@@ -2896,7 +3095,7 @@
     {
       "code": "NU1101",
       "level": "Error",
-      "message": "Unable to find package System.Text.Json. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://gallery.uipath.com/api/v2, https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json, https://www.myget.org/F/workflow/, Local, Official",
+      "message": "Unable to find package System.Text.Json. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://api.nuget.org/v3/index.json, https://gallery.uipath.com/api/v2, https://vmrpaprod.informatica.banrural.com.gt/nuget/v3/b4466f27-e90b-4179-9417-f1139d630e25/index.json, https://www.myget.org/F/workflow/, Local, nuget.org, Official",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.1"
