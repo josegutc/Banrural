@@ -1,7 +1,7 @@
 {
   "name": "Automatizacion_Banrural",
   "description": "Robotic Enterprise Framework",
-  "main": "Tadmin\\BusquedaEnExcel.XAML",
+  "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.System.Activities": "[20.10.1]",

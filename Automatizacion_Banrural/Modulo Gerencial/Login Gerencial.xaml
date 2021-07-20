@@ -1,4 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login_Gerencial" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,3574" sap2010:WorkflowViewState.IdRef="Login_Gerencial_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Gerencial" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Mes" Type="InArgument(x:String)" />
+    <x:Property Name="Anio" Type="InArgument(x:String)" />
+    <x:Property Name="Oficina" Type="InArgument(x:String)" />
+    <x:Property Name="Dia" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1192,831</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Login_Gerencial_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -31,6 +42,8 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -56,15 +69,25 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login_Gerencial" sap:VirtualizedContainerService.HintSize="476,3469" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login_Gerencial" sap:VirtualizedContainerService.HintSize="242,507" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="434,755" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -92,8 +115,14 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp FilePath="C:\Cobis3\Gerencial\gerencial.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGGSURBVFhHxZOBkYMwDASpJS3QAi18C/TkFr4WWqAWnrN0RoAwJrHzN3ODIbZ2EybdB1n0+i9ZliUKsF9NhNvimbZ5TnBbfK5tEhfqFXu11eKCsg31JHxAriu8sgBjIFdVeF2BSZuCtVMDbyOQEznAawjw8FmAZRw4irMy4nmWaVq/lwzw4bYOHNXzjxPhLO5dqK0DR3FWW5wdvIbANI7FIid4LQEW99pTXPg8z+vml0ByLYCzwZG4hOOKz1EXzBbCf9fnrgBzlECLRDLwJYRYwnHVWSnck3KUQOV14D32cYAngOd3cBF4YW9KEmAZK9D3Y6wI/EQYSoG41gE5uPsKdO+pDOEiALj8CqGXK9fpm2ss9C0BdhiGFR7ML7AJsITbNhHYJDYBD45+RcADs80ERML/r9vmBMI6GC0SsOB3BKyEhSeBOwkPznpg9g5OAUY35AVkz25A7J3A8ZyedaObzwLyfD+E5bmjwFO4jR4UAVnvh1wMinspgHXBmWyewG2qwBun6/4A2bxTzlXDiyoAAAAASUVORK5CYII=" InformativeScreenshot="19208de5b4f4565da6e25409e5fd2d80.png" Selector="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 '/&gt;" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Conexión con el Servidor" sap:VirtualizedContainerService.HintSize="434,815" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Conexión con el Servidor" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -121,8 +150,14 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp FilePath="C:\Cobis3\Gerencial\gerencial.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEQSURBVFhH7Y7BDsMgDEP7/z/d1SVBaWoIKXTaYZbeBTs22wPtAa+oDux7H5s9mNbQaAu9R9ETTY0r2oPCjGjZDOgs1bFowQrQXSbaoocrwUaZuus02dFKdAeDXvTAgkwvF/mK5C6iQQsylqzvkVwVDVmQsWR9j+SqaMiCjCXreyR3igY8yFmyPkOy3PRosZL1GZLlJiMqj3yP5Ln5Df4fGPrA7Ad79z/zAYgGQM8boXWPdwyraEiJ/Ba9O3gYVtGQAj/KeKIb8S+iQQV+lFGirPg3hQMrMuofUNEjD3ItWN4iua7o4QrQXSZi0YIZ0Fmqx3UesbIM2oPCJ5r6hN6jaFa1jA1ZbPbgFfkRT0Lb9gHlQiZLcp7LowAAAABJRU5ErkJggg==" InformativeScreenshot="306861384dbb92b37555b0307406d6ed.png" Selector="&lt;wnd app='gerencial.exe' cls='ThunderRT5Form' title='Conexión con el Servidor'/&gt;" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Copyright" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Copyright" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -145,8 +180,14 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp FilePath="C:\Cobis3\Gerencial\gerencial.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVFhH7ZbRcYMwEETpiZ7oiW4oQD0peodWPhgFCQOxP7IzO9jS6fbpnHE8HCiO4xjdsyWrxZ31h4poWZY4z7M1bDQ9W38oayaFEEpT9taSjXLlqo76Y3GQJl40nKZp09AFWJhXrf6MrAEQ2I+VPQoEud9DtfpT4qACaDTPwd7rRtrzok77Cn93Aql5LEE0qTTLsasESh17V8KRAbgGxeO4rhFAoMI18v2ZeXj9jSR3KTV6jZbAmqkThKxJWY8U7B1TT9YJaMkAZImJyNTEsEIQKivcxFlnN4mmNgB7EPYxAPtx2/rkXieFKU0nTyGvN1UFkNmPId8SpcCq84SeA5ClFLhxgqD2eYA9iJsCtX8HIP8DfCsAr2neqxLIt95VAJ7Z3aoC6Cu4Gizn8DCuoWfHL10CUPg7n7/0K8AegjAPwPuPASj8YwD6/DE1XweQ/3t26REA/UzrAbEDdwPoR4t/pvVDFZArALzWzX14D4BkTbx7AXj60N6bt1QgjgCwbqpwDt+pAuIBWLv7xi1ZqOxv3Rc+DD+e/s8FBz31agAAAABJRU5ErkJggg==" InformativeScreenshot="29faa007cb18910b354064087be3732d.png" Selector="&lt;wnd app='gerencial.exe' cls='#32770' title='Copyright'/&gt;" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Datos Generales" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Datos Generales" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -169,8 +210,14 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp FilePath="C:\Cobis3\Gerencial\gerencial.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVFhH7ZMNDsMgCIU5+o7mzWwdvIk/7WxDZVl8zReVUniSlJaWdkVnKIYQ5BAfJvfKPYtD+1FSb987f+fAQKb9qFYvrvPP0b0+nE/AloMJuBtwht148FsGiF5vsEeStVCX+3QMaKYa8KAwgBvXq7VSTdAYqJlqwIPGAG6NNTEq5F+hMKBHD1J8VLrwKIUBD5aB/zEghe5iZSD/CSje5uxJkVExOwMZblY8EnvMAK88BSmM1vxILL2HCYlZTeA23eBMPEW0AYIqt4oRstPLAAAAAElFTkSuQmCC" InformativeScreenshot="6409bcb97c27dd56dea69b493b438fcb.png" Selector="&lt;wnd app='gerencial.exe' cls='ThunderRT5Form' title='Datos Generales'/&gt;" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -193,6 +240,12 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp FilePath="C:\Cobis3\Gerencial\gerencial.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVFhH7ZbRcYMwEETpiZ7oiW4oQD0peodWPhgFCQOxP7IzO9jS6fbpnHE8HCiO4xjdsyWrxZ31h4poWZY4z7M1bDQ9W38oayaFEEpT9taSjXLlqo76Y3GQJl40nKZp09AFWJhXrf6MrAEQ2I+VPQoEud9DtfpT4qACaDTPwd7rRtrzok77Cn93Aql5LEE0qTTLsasESh17V8KRAbgGxeO4rhFAoMI18v2ZeXj9jSR3KTV6jZbAmqkThKxJWY8U7B1TT9YJaMkAZImJyNTEsEIQKivcxFlnN4mmNgB7EPYxAPtx2/rkXieFKU0nTyGvN1UFkNmPId8SpcCq84SeA5ClFLhxgqD2eYA9iJsCtX8HIP8DfCsAr2neqxLIt95VAJ7Z3aoC6Cu4Gizn8DCuoWfHL10CUPg7n7/0K8AegjAPwPuPASj8YwD6/DE1XweQ/3t26REA/UzrAbEDdwPoR4t/pvVDFZArALzWzX14D4BkTbx7AXj60N6bt1QgjgCwbqpwDt+pAuIBWLv7xi1ZqOxv3Rc+DD+e/s8FBz31agAAAABJRU5ErkJggg==" InformativeScreenshot="0b9b11716170cf649b96f081e18b7ed4.png" Selector="&lt;wnd app='gerencial.exe' cls='#32770' title='C O B I S   Gerencial'/&gt;" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>

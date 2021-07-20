@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Busqueda_Tabla" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1216,3366" sap2010:WorkflowViewState.IdRef="Busqueda_Tabla_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Busqueda_Tabla" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="NombreCobis" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1192,3255</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Busqueda_Tabla_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -87,7 +95,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Busqueda_Tabla" sap:VirtualizedContainerService.HintSize="530,3181" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Busqueda_Tabla" sap:VirtualizedContainerService.HintSize="530,3150" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="ButtonActive" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Matches" />
@@ -97,39 +105,72 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Login Gerencial workflow" sap:VirtualizedContainerService.HintSize="488,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Modulo Gerencial\Login Gerencial.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gerencial Reintegro workflow" sap:VirtualizedContainerService.HintSize="488,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Modulo Gerencial\Gerencial Reintegro.XAML">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Int32" x:Key="DiaBusqueda">
-          <Literal x:TypeArguments="x:Int32" Value="13" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="MesBusqueda">
-          <Literal x:TypeArguments="x:Int32" Value="2" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="AnioBusqueda">
-          <Literal x:TypeArguments="x:Int32" Value="2021" />
-        </InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="488,2785" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="488,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Login Gerencial workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Modulo Gerencial\Login Gerencial.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="488,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="386,204" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gerencial Reintegro workflow" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Modulo Gerencial\Gerencial Reintegro.XAML">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="DiaBusqueda">13</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="MesBusqueda">2</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="AnioBusqueda">2021</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="488,2876" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="454,2496" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="454,2587" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="DataTable" />
+              <Variable x:TypeArguments="x:Int32" Default="-1" Name="Row" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,523" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile Condition="[ButtonActive &lt; 20]" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,523" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,358" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -152,9 +193,6 @@
                   </Assign>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
-              <ui:InterruptibleWhile.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ButtonActive &lt; 100" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-              </ui:InterruptibleWhile.Condition>
             </ui:InterruptibleWhile>
             <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
@@ -169,6 +207,9 @@
                 <OutArgument x:TypeArguments="x:Int32" x:Key="RowIndex">
                   <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="Count" />
                 </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Descripcion">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;CxCAjena - &quot; + NombreCobis" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <uix:NClick ClickType="Single" DisplayName="Click 'C O'" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
@@ -214,16 +255,34 @@
                 <uix:TargetAnchorable DesignTimeRectangle="591, 470, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIbSURBVGhD7ZvRccIwDIY9LINkFNZon1ihHYMnNkgjxYIfIzsOYJOo0t3X2pKxo69x7/rQcLlcRuJwOIwUx+PRLF8/5/Gb+L1xJ0D7kCWKAkSCZRbfAOvhAmoFSM4azQWcTqcuaGfXsEsBIQQGc9rZNXQXoD38GubPj5HbPtrZNXQVwA8/7RWGWcLz7FUANT7tJQIwqF4Krfl/KECan+e4t3Z2DZsXMDf+2LwJATyOcB3md3DD9H0eD8PA33Fv7ewaPioAazm05s0IwKB6GmnzEvsXwI3FcYTrME+bD9R0rJkRgDUkbZ4axrrpK5A2L3kMMwJ4HOG65KYvPIbXHjEjAGtc59rcXPraIyavADeVNJYLc1dAGrpKiPkcZgRc87F5XFvCjAAMqueC1iJmBPA4wnWY3xGblebNXYElsHGamxGAQfVc0FpseN8CYjMEBtVzQWvlp0/sWMD04NDIs4hAzGln19BXQHzwd4F7a2fX0FzA1nEBLsAFuAAX4AJcgAtwAc8KCIH+MHlEW7tF3iZAq7XinWc2FSA1XKPlSuvTvDZfk0tpcgVyNcyVxmtqKVgrrROaX4G0jvPceE0tzWENxzk+dgVK4zW10loc52hyBQitlsvl9krz2tp0jnkc53hZwFpqHqonLwmQZjS09cRSvTfd34Ct4QJcgAtwAS5gSYD272ZWWBSgfcgSRQEiwTLVvwOshgt4EHAe/wDDYtq7ITV2TwAAAABJRU5ErkJggg==" InformativeScreenshot="ab127de1aa57c03fcc519a16370af123.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetExcelData workflow" sap:VirtualizedContainerService.HintSize="412,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Modulo Gerencial\GetExcelData.XAML">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SaveExcel workflow" sap:VirtualizedContainerService.HintSize="412,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Excel\SaveExcel.XAML">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="ExcelName">
-                  <Literal x:TypeArguments="x:String">Detalles</Literal>
-                </InArgument>
-                <OutArgument x:TypeArguments="x:Int32" x:Key="RowIndex">
-                  <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="Count" />
-                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="ExcelName">Detalles</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="412,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetExcelData workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Modulo Gerencial\GetExcelData.XAML">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="ExcelName">Detalles</InArgument>
+                      <OutArgument x:TypeArguments="x:Int32" x:Key="RowIndex">[Count]</OutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
