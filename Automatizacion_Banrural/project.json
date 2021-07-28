@@ -1,7 +1,7 @@
 {
   "name": "Automatizacion_Banrural",
   "description": "Robotic Enterprise Framework",
-  "main": "Main.xaml",
+  "main": "EditWordSignature.XAML",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
@@ -48,12 +48,6 @@
       "output": []
     },
     {
-      "filePath": "Sadmin\\Login Sadmin.xaml",
-      "uniqueId": "44bd4923-c1f9-49fd-bfd2-c3d2af7f4395",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "Tadmin\\Login Tadmin.xaml",
       "uniqueId": "4e6b762f-ccd7-4602-aaf2-040fa8a95717",
       "input": [],
@@ -66,12 +60,6 @@
       "output": []
     },
     {
-      "filePath": "EditWordSignature.XAML",
-      "uniqueId": "97449bd7-321e-422d-a894-aec1f0a1dfa3",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "Modulo Gerencial\\Busqueda Tabla.XAML",
       "uniqueId": "cabab4af-3d8a-428a-b47c-3016769a5b7f",
       "input": [],
@@ -80,6 +68,24 @@
     {
       "filePath": "Tadmin\\BusquedaEnExcel.XAML",
       "uniqueId": "439e505c-3c1d-4dc4-ad98-02743aaa8bbb",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "EditWordSignature.XAML",
+      "uniqueId": "70fb0600-e206-4e42-a582-8bccc5d8a3ff",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Modulo Gerencial\\Sadmin\\Login Sadmin.xaml",
+      "uniqueId": "3aa351dd-1735-4e63-a75e-a68e6c0ebea5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Process.xaml",
+      "uniqueId": "8a65dc7c-8b54-4aef-a7e4-115beac0ffb7",
       "input": [],
       "output": []
     }

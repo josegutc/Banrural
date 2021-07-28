@@ -1,0 +1,189 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sadmin_Operaciones" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ValorOperacion" Type="InArgument(x:String)" />
+    <x:Property Name="CuentaCliente" Type="InArgument(x:String)" />
+    <x:Property Name="Observacion" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1208,4722</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sadmin_Operaciones_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sadmin_Operaciones" sap:VirtualizedContainerService.HintSize="476,4537" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Soporte Administrativo 3.4.0" sap:VirtualizedContainerService.HintSize="434,4445" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,4156" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="233, 31, 101, 19" FriendlyName="'Acreditamientos'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='1' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Acreditamientos' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Acreditamientos' role='menu item' automationid='' check:text='Acreditamientos' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAXCAYAAAAIqmGLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIASURBVGhD7ZfRjcMgDIa7cOZgDdZgjGyRx6gLcNhgYnwmJaeLGiR/Emog2LX9g6/3isbjMZEmwESaABNpAkykCTCRJsBEmoDLIq1+iYtfy+wu1ugXF8OWHrcQHT3fwd3+/4FrIkFCzkfv7k6KidTQW/8m98d0SaQtuOhSNPR5HyYS54JIWwx0g/BGhbTCgfepFS555I6YE/DepTWfZrAN2gvtK2sAW3chsMSpCPB5+KeWi+1XrFWb9fAJr+Bw0d7jkIkiq/GVPcELez2m1gfVAtBq9JlxkRphmGBI/vLftysn0S3I6ptkjxyhmLSP2wj7BrkvFYLiTd8DRalx4FwIoPkX8VURuvZA3lsFQMHKe7AbVYYxLJJscVjIo6opEHYrKiIBccJwgI/mAADcrvdcKALk0dt3NmfPvfhG7QGlFnDb0U3xz+s4wqBIEIgIHkcJRgks8zkBBNb/IlLjj99use90zp5H8+jZA4qPKlKB2i5fO2NMJDitnb9B+YvO2p1Mrt8WKejhdsfjwuJ09p3O5fNoHpo9kH1UATrCy850xpBIcBI0h03LK8HRLcvLMoEEBs1uI9mztqX/cMBdGMthlw8Hzpt/DbTC9ebinRrfub82pkTjg9k1rVm7sTrjPxyMr2EiTYCJNAEm0gS83u93tPHs8dr3Pdp49rB293hi/AETHPh13vzbFwAAAABJRU5ErkJggg==" InformativeScreenshot="2f46d752aa5cbaad24e0550e7f6f431d.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5MDIForm' title='Soporte Administrativo 3.4.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Acreditamientos" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 54, 290, 22" FriendlyName="'Operaciones'" FullSelectorArgument="&lt;ctrl name='Acreditamientos' role='popup menu' /&gt;&lt;ctrl automationid='77' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Acreditamientos' role='popup menu' /&gt;&lt;ctrl automationid='77' role='menu item' check:text='Operaciones' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASYAAAAaCAYAAAAaC/G4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHuSURBVHhe7djNjcMgEIZhN0U/dONm6MWtRG6A9fBjAx5no5U2msTv4TnYgIcc+MRkWtc1isfj8Va1LgCMCCYA5hBMAMwhmACYQzABMIdgAmAOwQTAHIIJgDn2gin4OE3Tzs2LPu9dljm6ycV5UcYA/AtbwZRCqQ2BJc7OQDgBeCtDwZRDyIfhfbqx+BjadwC+mp1gugwgCax6iwrRy40qyFyl1UvfqG1g/VZe473b3wV/tIqTD8f6Eo51LIdkqVlvcV2NNkjLvPloRX/fm1YPgK1gcnNcxvfdTUoO/3aI67x02IfQqgGytYU5GPIavR1s1+Q653ntnPytPUBO9be91aBLbWkfjqe9yZwuGAGIz7wx1QO+kdtPCoruRlKkQ39ek0Ojzitjl/Wb9cqcvf6pzriu2ZeQvZX3emgC9/Vh/zGNh79Z80qwyHM3rwm9V9Yrc14PJu3b2TJLm6n8duCmDAXTpmt/hBzu9kYxPHcHfpxbDYEhNdRW8K+tXFv/IpjKumc3IwmnZ+PAndgKJtG1WeMtIh/2/Ee2Mp6C4lirt3I5gNK489HvbaLIAdJ/e1jf1bgKIuVZ21v3W69vVMDd2Aump8bDD+AbEUwAzCGYAJjzYcEE4A4IJgDmEEwAzCGYAJhDMAEwh2ACYMwafwBqXJpTHn4tBAAAAABJRU5ErkJggg==" InformativeScreenshot="414e08fcb40bd26ecbd10414b3a35071.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Operaciones" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="569, 164, 58, 42" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Operaciones' /&gt;&lt;wnd aaname='Generar' cls='Button' title='&amp;amp;Generar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Operaciones' /&gt;&lt;wnd aaname='Generar' cls='Button' title='&amp;amp;Generar' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAuCAYAAABwF6rfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH5SURBVGhD7ZYBdoIwEEQ5rAfhKN5Ej8QNLBOYOmw3GEoiEJjXL2GJst8tfW26rnuR2+1WNeo6ET8T18Rxoebc7/eJ/CnEIZ0kzlotHFa8aZqAdy2FQ4pD+IWfM4nnkAaHEs8lDQ4jnlMaHEI8tzQoJo4mc0FpD+/eKRQVfz6fgX65gP5lTFiPtTfDvuFzqxHvX/pQitIanKO0a/GlIHPSjL7Hu3cKRcVTw71WGudzwR7F6yNGUXE0ngL34qjPNGqfMrxneJ/XR4zdTHwQGEXGWrp4WLh9xPiKOCcbA3s9cO1TsK9/CfJeHzE2nzgl/5tBPCzcPmJsOnHseTSPcFS8cD/Q91P6EBNv2zYcKWLDuoX5PUdJjl4fMb4urtPiOhXGk0bN6yPGZhO3LA0+X/F6mKO4uDe5tTD/ESbZxJum/YMXNO5NnCzJ5uIU9WoaO7m17FR8+oxzD+B0taZ1e42xNdxDa7YfrVmyi+tNAcL1MKX1a0Ynzmt2HaPgxN9Ncq1oXSfs/SYA3c/YiYNYP5Yi4jwHCNeYmqL12FphneG57UHXMbKIA97MwszVdO094zjXPczmE/ewf9y82Ikq/AI8GH3Gl7JaXL9tn/d/VyXwekqh2MT3ziV+iV/il3gIa7WQJM5NNRIV9zbXhCtO+ZpR14n4mTjpxLvXD1ajVdgwsdi3AAAAAElFTkSuQmCC" InformativeScreenshot="0c4b4d608b6ab4a0aceb64071f6dd865.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5MDIForm' title='Soporte Administrativo 3.4.0' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="101">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="90, 73, 67, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='9' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAXCAYAAABZPlLoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVFhH7djBCcAgEETRbdeutrdtwA5MDGgikcH7/g+DB28PvGi11sb2A0ds4rg7u9cbHgtOKSX1IkLjZO4Ix8yeM1vgiMARgSMCRwSOCBwROCJwROCIwBGBIwJHdISTNYnTL7Nvi0Nvw2PisP+WZ8W+f8jeLhgstIYoCkY7AAAAAElFTkSuQmCC" InformativeScreenshot="0d73da65b62e913f88c030bb40475a44.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="917">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="90, 113, 67, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='11' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAXCAYAAABZPlLoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABxSURBVFhH7dixDcAgEMXQrMtWtxsLsAEJBRAE8gLY0q/onnQNTymlttmsewwct2/gRIT71uoeC05K6erlnBnn5sSBxIHEgcSBxIHEgcSBxIHEgcSBxIHEgcSBxIEQpz3eviOOzbrHwHH7lrNy/z/kqC9DC+dTe0eI9wAAAABJRU5ErkJggg==" InformativeScreenshot="2b1bd56b065b1c350adc7cdb1f4738ac.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="200">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="90, 133, 67, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='12' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAXCAYAAABZPlLoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABxSURBVFhH7dixDcAgEMXQrMtWtxsLsAEJBRAE8gLY0q/onnQNTymlttmsewwct2/gRIT71uoeC05K6erlnBnn5sSBxIHEgcSBxIHEgcSBxIHEgcSBxIHEgcSBxIEQpz3eviOOzbrHwHH7lrNy/z/kqC9DC+dTe0eI9wAAAABJRU5ErkJggg==" InformativeScreenshot="a6fc8411c1d4c0f5d7be3a06791f319c.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[String.Format(&quot;{0:ddMMyyyy}&quot;, DateTime.Now)]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="424, 113, 100, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='15' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAXCAYAAADnaAq1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVGhD7dSxDcAgDAXRrOut2I0FvAERRYiiIFpfcSf9ivLJXJk55ozV47KAHHMLqLXmINte0HyICFe83vsZyGoTCJ5A8ASCJxA8geAJBE8geALBEwieQPAEgicQPIHgCQTvCDQfXf22QMbqB+SY+3xxjrH3gnLcbBIvt+zXtFkAAAAASUVORK5CYII=" InformativeScreenshot="013e26fa44f36c5a868a3eb2f7adfd3e.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[ValorOperacion]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="424, 133, 100, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='16' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAXCAYAAADnaAq1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVGhD7dSxDcAgDAXRrOut2I0FvAERRYiiIFpfcSf9ivLJXJk55ozV47KAHHMLqLXmINte0HyICFe83vsZyGoTCJ5A8ASCJxA8geAJBE8geALBEwieQPAEgicQPIHgCQTvCDQfXf22QMbqB+SY+3xxjrH3gnLcbBIvt+zXtFkAAAAASUVORK5CYII=" InformativeScreenshot="ac97e9ce9db291cd5ec3ceac69a0d8f6.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="258, 175, 17, 15" ElementType="Button" FriendlyName="'Abrir'" FullSelectorArgument="&lt;wnd cls='ThunderRT5ComboBox' idx='2' /&gt;&lt;ctrl automationid='DropDown' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5ComboBox' /&gt;&lt;ctrl automationid='DropDown' role='push button' check:text='Abrir' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAATCAYAAAB/TkaLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABrSURBVDhP7ZABCsAgCEW7rrfybl7AGzi/g8FiBTMJBvvwRCweWWNmqwRpRGRViMgpjerBYIWhNBusPZWq6mt+6V3qiWarFOc9/Z3US2dCkF5/JAR7/jSq51tSHGZ5lGK4yiVFU0lIo5bG7AAbwlMhSwMSuQAAAABJRU5ErkJggg==" InformativeScreenshot="d0205b40b45bd01c042c9052c0c98b8a.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Abrir" TextMethod="AttributeText" TextSelector="&lt;ctrl role='push button' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1, 12, 185, 11" FriendlyName="'Manual de'" FullSelectorArgument="&lt;ctrl name='Manual de las cuentas afectadas' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Manual de las cuentas afectadas' role='list item' automationid='' check:text='Manual de las cuentas afectadas' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALsAAAAOCAYAAAB3l22sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGaSURBVGhD7ZULboNADEQ5Tg/GIXqDHrHHoXJUoydrhiy/RIF9ksV4PGQRssgwjuM0/XxNw/fvrStRs16fXbHfseePZU/jrtfHkg/DfG29r18/5zove6dzdfqyd26DXPbH3/h/EeefxbOztjzP2vxVeeV7yLPe/d7tl70+YO1fQct5a59pbf4dnP2Me39/y/17zzyC3cteffb0A/ZupjwF88woj7TmnZ+oOXs3q/PqB61e4PxEzVVe5QLlt3oBfc6UFzj/CJqWvZaCM2aVXzXZk3GatPguk7jsVs2ir2jNVdR9td+iKy5HTVoyR7F72dVsrQ6yp09NXCY1q1J9ZpWvcDP6SrPoL+kkvTqrfYX3ZI464JwzaqL89DhzOsje+WfwdNlJ9div0Sz6S5q4DLXD5akT5QX0lWbRr7gMdbA0C5QX0Hc6qH1C3+nAzdbqRHlHIJc9D+OhyguU73SQfYtPXWGWGeWRpXz6tVe4DH3OlryqA9fTr72CmczVPlBe8MxPmNvq1/5o7Je907kafdk7t2Fe9l69rl/j9AcD50R/MW4HVgAAAABJRU5ErkJggg==" InformativeScreenshot="3938191660642cdcdfa6cb43a36cecca.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Manual de las cuentas afectadas" TextMethod="AttributeText" TextSelector="&lt;ctrl role='list item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_6" Text="[Observacion]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="29, 268, 476, 51" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='8' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAeAAAAA3CAYAAADUmJm2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEJSURBVHhe7dVBDcQgAADB2sUV3jCAAy5pLpXAfmaS1bDPnPNIkqS7vQMeY0iSpIt9AwYA7th7GzAA3GbAABAwYAAIGDAABAwYAAIGDAABAwaAgAEDQMCAASBgwAAQMGAACBgwAAQMGAACBgwAAQMGgIABA0DAgAEgYMAAEDBgAAgYMAAEDBgAAgYMAAEDBoCAAQNAwIABIGDAABAwYAAIGDAABAwYAAIGDAABAwaAgAEDQMCAASBgwAAQMGAACBgwAAQMGAACBgwAAQMGgIABA0DAgAEgYMAAEDBgAAgYMAAEDBgAAgYMAAEDBoCAAQNAwIABIGDAABD4BrzWkiRJF3v+MwYArjnnB4yvYAXJCai9AAAAAElFTkSuQmCC" InformativeScreenshot="f62657f8c7e8da76596d6c4eadc970d0.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Generar Operacion'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="273, 32, 129, 25" FriendlyName="'Generar Operacion'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAZCAYAAAAWlU1+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFnSURBVGhD7ZkLboNADET3sByMI3IDWiI5mjq21yTelM8gvcr2eCGoT5WqtGVZVnJvKAGhBKQjwTRN5ORYv1eNK8F2A17nvzIimBKIAFZGzsU8z10RXiSgANejJ8IfCSjAdYlEeEpAAa6PJ8JDAgpwHywRWqUArbUXrL2j8+579HYx7+2ORIvQqgXozSoZcX/rnpnnfLKTOVsNimD+i/gO//EiI5458j28e498ZoSI8DUJdO71vbmXefsy9/Y12Rx3cIZzK5PcqqW3zsm8kkNJkMl0b53TeLtYa6JsQ+dRn82wzvRVHFICTfacZDhDdIb7mt6OzqXXRLtRnemrOPRfAkRn2EeZ1XszZG8e7Ue7Xp3pq/iKBDizaiuLzu3Jol2sNVaGM51HfTbDOtNXUS7BhnxYJJv35nt7xMpkZoF7el/31n6USY511Ot5JUMkIOeCEhBKQCgB+eUpwfaD3JvHF0i87nyt6w/GA98z68k3/AAAAABJRU5ErkJggg==" InformativeScreenshot="fbce71623f05de78f0e4c5727c215372.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Image" TargetType="ImageBased" Text="Generar Operacion" TextMethod="AttributeText" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ThunderRT5TextBox'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_7" Text="[CuentaCliente]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 180, 100, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAXCAYAAADnaAq1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dSxCcAwDAXRrKutvJsW0AYObhJCjFtdcQe/cvmQr6qajjuB4HuAxhgOstUWKCJc8zLzDGS9CQRPIHgCwRMInkDwBIInEDyB4AkETyB4AsETCJ5A8ASCdwRaj65/WyBj9QNyzH2+OMfYe0E1b/67HiNwrB53AAAAAElFTkSuQmCC" InformativeScreenshot="f4a01cc29b7b09c301a2ab234a2566b1.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ThunderRT5TextBox'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_8" Text="1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 200, 100, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAXCAYAAADnaAq1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVGhD7dSxDcAgDAXRrOut2I0FvAERRYiiIFpfcSf9ivLJXJk55ozV47KAHHMLqLXmINte0HyICFe83vsZyGoTCJ5A8ASCJxA8geAJBE8geALBEwieQPAEgicQPIHgCQTvCDQfXf22QMbqB+SY+3xxjrH3gnLcbBIvt+zXtFkAAAAASUVORK5CYII=" InformativeScreenshot="4363818518e007409f1884a713a405b2.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ThunderRT5TextBox'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_9" Text="[ValorOperacion]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 220, 100, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' idx='4' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAXCAYAAADnaAq1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVGhD7dSxDcAgDAXRrOutvBsLeAMiCpCiIFquuJN+5fIJnqrqY8Zquiwgx9wCykwH2fYFjUNEuMtrrZ2B7G4CwRMInkDwBIInEDyB4AkETyB4AsETCJ5A8ASCJxA8geAdgcbR3d8WyFj9gBxzny/O0Zb9BVZzLLp1p8ZZAAAAAElFTkSuQmCC" InformativeScreenshot="373ed3b2528806605fa50ac877029c8d.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ThunderRT5TextBox'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_10" Text="[Observacion]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 240, 383, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxWnd40' title='Agregar Cuenta Crédito' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYMAAAAXCAYAAADp5CPzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACSSURBVHhe7dexDYAgFEVR12UrdmOBvwFCIY1GO2P85yS3oiThhS0i+oxvcS/AG463Zo2BJClvawxqrZKkRF3+DOZBKUWSlKDW2v0YAPB/xgAAYwCAMQBgMAYAGAMAjAEAgzEAwBgAYAwAGIwBAMYAAGMAwGAMADAGADyMwTyUJOXocgwAyOc0BpKkvBkDSUpf9B0pD8FdRnd24wAAAABJRU5ErkJggg==" InformativeScreenshot="9735614498812705e673ea83f131c55f.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Generar'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="276, 343, 133, 24" ElementType="Button" FriendlyName="'Generar'" FullSelectorArgument="&lt;wnd cls='ThunderRT5CommandButton' title='Generar' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5CommandButton' title='Generar' check:text='Generar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAAAcCAYAAABVj5w5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADtSURBVGhD7dbBCcMwDIVhr5utslsW8AYpPqgIVZaakkBt/4YPKuv5lHdoqbWeQISSIPUuCYejz7ZtfkmO4wDOfd/jksiMdVESpCgJUpQEKUqC1FQlKaV88HK4ZpqSeKWgKPeYuiS4x3IlkZzN23u9+/bdL9kRTFkS/THkzmaiN71d9E521pXsv1rqP4nMVpS9+q6X72VHsGRJdKa307PdaXYXzXY3imlLIrN3581P7LLsKKYpSSMfwYoy9j6be/cye1nZ698jmaokeAYlQYqSIEVJkKIkSFESpMKStCXQuCVpl4D2URKgh5IgUc8XKfLMLOFQ95MAAAAASUVORK5CYII=" InformativeScreenshot="ceab64880ea4570938b58f79f17ce8fa.png" ScopeSelectorArgument="&lt;wnd app='saadmin.exe' cls='ThunderRT5Form' title='Generar Operacion' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Generar" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Sadmin\saadmin.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEUSURBVFhH7Y/bEoQwCEP9dP/cbQS6YcGxF3VfPDMZakoJLi8DbBdpmG0WzJBRY+iYcTBDRo2hY8bBDBl1jjU7zaJzTkGrvKj4BXDukaHfh7hmwT+exTJUAW0DcRF/P4bNQEXgL7iyy1SzyIw6L0BNEfZx7pFhZ/UDuHIPmCO/B84oClCTB17m98IZRQFcpUHwMr8XzigKUJMHHvv23SrDzuoHcOUeGPAyvxfOKApQkwde5vfCGUUBXKVB8DK/F84oqodH9F2g/pBss673V79AXWqnNt1dkSV5xeEFWh5fUZEF0bnSPGS2Igug7smKa7qzWhbqnkycPr6qIkvlaHp8RUWWKtA8ZLYiSyI9vN0Tevkny/IBAL13VDTAInUAAAAASUVORK5CYII=" InformativeScreenshot="7d633b8257151e7c8f4c96302ab87723.png" Selector="&lt;wnd app='saadmin.exe' cls='ThunderRT5MDIForm' title='Soporte Administrativo 3.4.0'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -69,6 +69,14 @@
       <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="SaveExcel" sap:VirtualizedContainerService.HintSize="476,2068" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -95,7 +103,7 @@
                 <uix:TargetAnchorable DesignTimeRectangle="155, 2, 28, 31" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Barra de herramientas Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Barra de herramientas Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAYAAAD17ghaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACMSURBVFhH7c6xCYAwEIVhV3GZrGHlBLZ2qe3tsoCdS9g400kK5ZSL5JQkIq/4IQeX46ustVSyqu4MlQwAAAAA4PsAt86vkm7yogDSO5R2HwAA1ICYpL+hVABtACQB+Pmu6y6fpR4B+Mz7J2BcJmpcf8zZAWZoT4jsAN+O8Ae1Sfd4UYCUAQAAAIUBhjaKFaTS0TtPcgAAAABJRU5ErkJggg==" InformativeScreenshot="df76ec0246f395072364c9bec73942aa.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Libro1 - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Guardar" TextMethod="FullTextScrapping" TextSelector="&lt;uia role='Botón' /&gt;" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[ExcelName]">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[ExcelName + DateTime.Now.ToString(&quot;mm-ss&quot;)]">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="36, 103, 413, 17" ElementType="InputBox" FriendlyName="'Libro1'" FullSelectorArgument="&lt;wnd aaname='Guardar este archivo' cls='NetUIHWND' /&gt;&lt;ctrl name='Nombre de archivo' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Guardar este archivo' cls='NetUIHWND' /&gt;&lt;ctrl name='Nombre de archivo' role='editable text' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaEAAAAVCAYAAADvhFEVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVHhe7drbjYMwFEDBrYZ+XI2boRZaSSkOYMzD2UhZFK0/PCMhBbjwe4TjnwQAjYgQAM2IEADNiBAAzYgQAM1UEZpSHEIaH9tp8RhT2K+/mblrimkY4vxWAHrzWYQuvhWhRxrDkIYY5/eJEECPGkaoWN4nQgA9+jBC5+vb72lZopu/ZOYj7A/kezGGY4ltXcrLc8sRX2ojQgC9uhmhOShhTOvpy/9FdZRO4bnMFsuMCAH06P6X0GlmiiU01b01OtfAHLOFCAH06gsRyhsMRAiAv7q9HLcvuV1CUz+fZ6/LcXVwlhkRAujRLxE6NhEcmw7Occm/8+aDerPBeW6zhqe8713gRAigR1WEAOD/iBAAzYgQAM2IEADNiBAAzYgQAM2IEACNpPQEDQKQFByCqmMAAAAASUVORK5CYII=" InformativeScreenshot="28883e0c60177eea5488cbab9594eeb4.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='NUIDialog' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Libro1" TextMethod="AttributeText" TextSelector="&lt;ctrl role='editable text' /&gt;">
                   <uix:TargetAnchorable.Anchors>
