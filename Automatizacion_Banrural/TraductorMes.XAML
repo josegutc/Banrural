@@ -64,18 +64,112 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[MonthName( Int32.Parse(Mes), False )]" sap:VirtualizedContainerService.HintSize="497,486" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-      <x:Null x:Key="January" />
-      <x:Null x:Key="February" />
-      <x:Null x:Key="March" />
-      <x:Null x:Key="April" />
-      <x:Null x:Key="May" />
-      <x:Null x:Key="June" />
-      <x:Null x:Key="July" />
-      <x:Null x:Key="August" />
-      <x:Null x:Key="September" />
-      <x:Null x:Key="October" />
-      <x:Null x:Key="November" />
-      <x:Null x:Key="December" />
+      <Switch.Default>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">Error</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Switch.Default>
+      <Assign x:Key="January" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Enero</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="February" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Febrero</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="March" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Marzo</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="April" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Abril</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="May" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Mayo</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="June" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Junio</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="July" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Julio</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="August" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Agosto</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="September" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Septiembre</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="October" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Octubre</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="November" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Noviembre</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="December" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MesNom]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Diciembre</InArgument>
+        </Assign.Value>
+      </Assign>
     </Switch>
   </Sequence>
 </Activity>

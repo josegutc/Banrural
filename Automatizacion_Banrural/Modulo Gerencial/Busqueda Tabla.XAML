@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Busqueda_Tabla" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="NombreCobis" Type="InArgument(x:String)" />
+    <x:Property Name="OficinaBool" Type="InArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,3335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192,2659</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Busqueda_Tabla_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -95,7 +96,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Busqueda_Tabla" sap:VirtualizedContainerService.HintSize="530,3150" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Busqueda_Tabla" sap:VirtualizedContainerService.HintSize="530,2434" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="ButtonActive" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Matches" />
@@ -108,59 +109,13 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="488,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_7">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Login Gerencial workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Modulo Gerencial\Login Gerencial.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <scg:Dictionary x:TypeArguments="x:String, Argument" />
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="488,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="386,204" sap2010:WorkflowViewState.IdRef="Sequence_8">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gerencial Reintegro workflow" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Modulo Gerencial\Gerencial Reintegro.XAML">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:Int32" x:Key="DiaBusqueda">13</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="MesBusqueda">2</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="AnioBusqueda">2021</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="488,2876" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="488,1753" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="454,2587" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="454,1464" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="DataTable" />
               <Variable x:TypeArguments="x:Int32" Default="-1" Name="Row" />
@@ -168,9 +123,10 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleWhile Condition="[ButtonActive &lt; 20]" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,523" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,563" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,358" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -193,6 +149,9 @@
                   </Assign>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ButtonActive &lt; 20" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+              </ui:InterruptibleWhile.Condition>
             </ui:InterruptibleWhile>
             <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
@@ -202,78 +161,97 @@
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetExcelData workflow" sap:VirtualizedContainerService.HintSize="412,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Modulo Gerencial\GetExcelData.XAML">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ExcelName">
-                  <Literal x:TypeArguments="x:String">Consolidados</Literal>
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;Consolidados&quot;  + DateTime.Now.ToString(&quot;mm-ss&quot;)" />
                 </InArgument>
-                <OutArgument x:TypeArguments="x:Int32" x:Key="RowIndex">
-                  <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="Count" />
-                </OutArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Descripcion">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;CxCAjena - &quot; + NombreCobis" />
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NombreCobis" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Boolean" x:Key="OficinaBool">
+                  <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="OficinaBool" />
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <uix:NClick ClickType="Single" DisplayName="Click 'C O'" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable Accuracy="1" DesignTimeRectangle="74, 171, 87, 14" FriendlyName="'C O'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAOCAYAAABaSYBTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVFhH7dAxCsAgEAVRj52bepwNKQTz2UrGbhYeyGD1x3hm6ZI2ipHhu2w6tB77/T7oXAbHBWVwXFAGxwVlcFxQBscFZXBcUAbHBbVRjDaK0UYBZr18Gwo8IB8ImQAAAABJRU5ErkJggg==" InformativeScreenshot="d9a44e3e59e2524df05308c4af950c85.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Image" TargetType="ImageBased" Text="C O B I S   Gerencial - 2.1.5" TextMethod="AttributeText" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,505" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
-              <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(down)][u(hk)]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:Int32">[i+1]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                </Sequence>
-              </ui:InterruptibleWhile.Body>
-              <ui:InterruptibleWhile.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i &lt;= Count" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-              </ui:InterruptibleWhile.Condition>
-            </ui:InterruptibleWhile>
-            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="591, 226, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Detalle' cls='Button' title='&amp;amp;Detalle' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Detalle' cls='Button' title='&amp;amp;Detalle' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVGhD7ZvLccIwEIbdU1qgFIYWuKYN32gjOVEAl6QMTnQgtIYFIf96+LGSrFFmvoks7dr6P+QDB7rb7aaI/X4/cDqdquXn76p+if83HwJMETXiFVB7eCJ4Amr/awJiBfBcbTQBWxWg+n4ArU1hkwI4/BoSNidgt9uNBKjDAdbGsCkBFP58Pn9K0OEZ1BNiMwI4PDNIMMJXLUBdvvQOupeEXn/yx+PxQwLqi6F4ARyeodAUnqFr1BdL0QLs8LaEpeGJYgW4wqv+wRrhiSIFhMLTOuqbQ3ECUoYnihKQOjxRjIAc4YkiBOQKT2QXkDM8ISJgCBWLL3xPNfq/BXrmXGQFKP1lxcWl1/l0oCnhX73vOfT8KcgJGDbqkaAFjCS4wsP+9zraQyzyJ8Al4SngJQGFR30mK0hIcwKAhK6jsPqb3JOHhGd4q9ZJ0QICEkiALYHXolkYnkh7AiwJi+EToE8O2kcMIgKIJBIGAfp+9OrMlCAmgEgZ/jE3XYKIAH6/h3ccSRAE7ceH2AnwShAE7cWH6CvglCAI2ocPUQEElCAI2oMPcQHESIIg6Pk+kgggTAmSoGf7SCagVJqAJqAJWFdA131DUO0czPutcW8xAaE5m5gawqyL7fGRRQBfL5mzx676EMkFxIxtXHUx4xDZBJiE+sy10NiE7+Mj6wlw1djXU8dTEBNg46pB86iO511ju57nQqwuYGusKsD8BBCoJzftBDQBTUAT0AQ0AQEB6Pd2tRAUgJpqwiuAJdRMUEDtNAEjAVd1B5mpycbQUAEFAAAAAElFTkSuQmCC" InformativeScreenshot="e43020f9b119eda3e9fea03ea570292a.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="591, 226, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Siguientes' cls='Button' title='Siguien&amp;amp;tes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Siguientes' cls='Button' title='Siguien&amp;amp;tes' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVGhD7Zs9csIwEEZ9ydyA4Qq0KXMFOurcIMkVaJI+F6DiBo6/mLXW69UflozQiJk3lldS7O8heUyR7nq99mC32/X4nE6navn4vvSf4McwE6BNqgmnAJJQM94VUPunCQgVQLXaaAKagMwCuq5Lgva3U5BVAG687/eMo4ezlVwyNhHwNRzPN34Fw6Dp+M8UeH/jZaqZvnQSNloBR6+EiSnkYcBIILiEFCI2eQbQEg+SMAVEcLcEEqFdN5TsAgCXQAKsEqZgFF6XQCKKF2BbAVYJMwFuCWbs/RI2E4DwhEsChTLh8krY4CFovv0QCTw8xyehaAEI/D7gkwBkcI5NwthXmAD+7VN4KYGCcRlUs6FJMH3xErILOA5HBLeFJ0iCrEv0ZwLeNQoVgOBSggxFuPo4moSxXvAK4BJkoFjG4JzxbbNAAef/4FKCDBTLUsBhqBcq4O0WnEuQgWJ5KgEIzCWkEYCwTyKAwnMJMpAGQmp1MAqYSyhWAEB4TogECmmrcxC+OAGAr4J7BYwB9brpxzE+PHiIAIIHkyxD6uFB8QKAJsC1ErqOWAaWFCsA+FYB0EQYAW4J4/7H22DhAoAWHkAAoQvQJawND7ILACESgFsAkOHRvj882EQACF0JbgGAS8BvgCdYAUSIBL8AkE7CpgIAl0DECwBpJGwuAOBGCS5ijtnnc8awGk8joCSagCagCYgT0HWvM2SdzmNYM3ctUQLkjT7yxom197BKAEf20Tmvh7TlXK1mq7tqsk59WbbAo9ox44hVD0HbBVK0OaFzXfNlH9WSPQNytDm2MbytnWvwMVm2QMg4XudtOUbWXOPlua3G66u2QAjygqWRRQA3nTN8iutkXwGl0wQ0AU1AE9AE+ARo/25WC14B2qSacAogCTXjFVA7TcBCwKX/AwcmFKypL/6yAAAAAElFTkSuQmCC" InformativeScreenshot="07b3bd51c6b645138813856971a3859a.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="591, 470, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIbSURBVGhD7ZvRccIwDIY9LINkFNZon1ihHYMnNkgjxYIfIzsOYJOo0t3X2pKxo69x7/rQcLlcRuJwOIwUx+PRLF8/5/Gb+L1xJ0D7kCWKAkSCZRbfAOvhAmoFSM4azQWcTqcuaGfXsEsBIQQGc9rZNXQXoD38GubPj5HbPtrZNXQVwA8/7RWGWcLz7FUANT7tJQIwqF4Krfl/KECan+e4t3Z2DZsXMDf+2LwJATyOcB3md3DD9H0eD8PA33Fv7ewaPioAazm05s0IwKB6GmnzEvsXwI3FcYTrME+bD9R0rJkRgDUkbZ4axrrpK5A2L3kMMwJ4HOG65KYvPIbXHjEjAGtc59rcXPraIyavADeVNJYLc1dAGrpKiPkcZgRc87F5XFvCjAAMqueC1iJmBPA4wnWY3xGblebNXYElsHGamxGAQfVc0FpseN8CYjMEBtVzQWvlp0/sWMD04NDIs4hAzGln19BXQHzwd4F7a2fX0FzA1nEBLsAFuAAX4AJcgAtwAc8KCIH+MHlEW7tF3iZAq7XinWc2FSA1XKPlSuvTvDZfk0tpcgVyNcyVxmtqKVgrrROaX4G0jvPceE0tzWENxzk+dgVK4zW10loc52hyBQitlsvl9krz2tp0jnkc53hZwFpqHqonLwmQZjS09cRSvTfd34Ct4QJcgAtwAS5gSYD272ZWWBSgfcgSRQEiwTLVvwOshgt4EHAe/wDDYtq7ITV2TwAAAABJRU5ErkJggg==" InformativeScreenshot="ab127de1aa57c03fcc519a16370af123.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SaveExcel workflow" sap:VirtualizedContainerService.HintSize="412,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Excel\SaveExcel.XAML">
-              <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="ExcelName">Detalles</InArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="412,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="412,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="242,507" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetExcelData workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Modulo Gerencial\GetExcelData.XAML">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="ExcelName">Detalles</InArgument>
-                      <OutArgument x:TypeArguments="x:Int32" x:Key="RowIndex">[Count]</OutArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'C O'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable Accuracy="1" DesignTimeRectangle="74, 171, 87, 14" FriendlyName="'C O'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAOCAYAAABaSYBTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVFhH7dAxCsAgEAVRj52bepwNKQTz2UrGbhYeyGD1x3hm6ZI2ipHhu2w6tB77/T7oXAbHBWVwXFAGxwVlcFxQBscFZXBcUAbHBbVRjDaK0UYBZr18Gwo8IB8ImQAAAABJRU5ErkJggg==" InformativeScreenshot="d9a44e3e59e2524df05308c4af950c85.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Image" TargetType="ImageBased" Text="C O B I S   Gerencial - 2.1.5" TextMethod="AttributeText" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                    <ui:InterruptibleWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(down)][u(hk)]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[i+1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ui:InterruptibleWhile.Body>
+                    <ui:InterruptibleWhile.Condition>
+                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i &lt;= Count" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                    </ui:InterruptibleWhile.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InterruptibleWhile>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="591, 226, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Detalle' cls='Button' title='&amp;amp;Detalle' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Detalle' cls='Button' title='&amp;amp;Detalle' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVGhD7ZvLccIwEIbdU1qgFIYWuKYN32gjOVEAl6QMTnQgtIYFIf96+LGSrFFmvoks7dr6P+QDB7rb7aaI/X4/cDqdquXn76p+if83HwJMETXiFVB7eCJ4Amr/awJiBfBcbTQBWxWg+n4ArU1hkwI4/BoSNidgt9uNBKjDAdbGsCkBFP58Pn9K0OEZ1BNiMwI4PDNIMMJXLUBdvvQOupeEXn/yx+PxQwLqi6F4ARyeodAUnqFr1BdL0QLs8LaEpeGJYgW4wqv+wRrhiSIFhMLTOuqbQ3ECUoYnihKQOjxRjIAc4YkiBOQKT2QXkDM8ISJgCBWLL3xPNfq/BXrmXGQFKP1lxcWl1/l0oCnhX73vOfT8KcgJGDbqkaAFjCS4wsP+9zraQyzyJ8Al4SngJQGFR30mK0hIcwKAhK6jsPqb3JOHhGd4q9ZJ0QICEkiALYHXolkYnkh7AiwJi+EToE8O2kcMIgKIJBIGAfp+9OrMlCAmgEgZ/jE3XYKIAH6/h3ccSRAE7ceH2AnwShAE7cWH6CvglCAI2ocPUQEElCAI2oMPcQHESIIg6Pk+kgggTAmSoGf7SCagVJqAJqAJWFdA131DUO0czPutcW8xAaE5m5gawqyL7fGRRQBfL5mzx676EMkFxIxtXHUx4xDZBJiE+sy10NiE7+Mj6wlw1djXU8dTEBNg46pB86iO511ju57nQqwuYGusKsD8BBCoJzftBDQBTUAT0AQ0AQEB6Pd2tRAUgJpqwiuAJdRMUEDtNAEjAVd1B5mpycbQUAEFAAAAAElFTkSuQmCC" InformativeScreenshot="e43020f9b119eda3e9fea03ea570292a.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="591, 226, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Siguientes' cls='Button' title='Siguien&amp;amp;tes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Siguientes' cls='Button' title='Siguien&amp;amp;tes' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVGhD7Zs9csIwEEZ9ydyA4Qq0KXMFOurcIMkVaJI+F6DiBo6/mLXW69UflozQiJk3lldS7O8heUyR7nq99mC32/X4nE6navn4vvSf4McwE6BNqgmnAJJQM94VUPunCQgVQLXaaAKagMwCuq5Lgva3U5BVAG687/eMo4ezlVwyNhHwNRzPN34Fw6Dp+M8UeH/jZaqZvnQSNloBR6+EiSnkYcBIILiEFCI2eQbQEg+SMAVEcLcEEqFdN5TsAgCXQAKsEqZgFF6XQCKKF2BbAVYJMwFuCWbs/RI2E4DwhEsChTLh8krY4CFovv0QCTw8xyehaAEI/D7gkwBkcI5NwthXmAD+7VN4KYGCcRlUs6FJMH3xErILOA5HBLeFJ0iCrEv0ZwLeNQoVgOBSggxFuPo4moSxXvAK4BJkoFjG4JzxbbNAAef/4FKCDBTLUsBhqBcq4O0WnEuQgWJ5KgEIzCWkEYCwTyKAwnMJMpAGQmp1MAqYSyhWAEB4TogECmmrcxC+OAGAr4J7BYwB9brpxzE+PHiIAIIHkyxD6uFB8QKAJsC1ErqOWAaWFCsA+FYB0EQYAW4J4/7H22DhAoAWHkAAoQvQJawND7ILACESgFsAkOHRvj882EQACF0JbgGAS8BvgCdYAUSIBL8AkE7CpgIAl0DECwBpJGwuAOBGCS5ijtnnc8awGk8joCSagCagCYgT0HWvM2SdzmNYM3ctUQLkjT7yxom197BKAEf20Tmvh7TlXK1mq7tqsk59WbbAo9ox44hVD0HbBVK0OaFzXfNlH9WSPQNytDm2MbytnWvwMVm2QMg4XudtOUbWXOPlua3G66u2QAjygqWRRQA3nTN8iutkXwGl0wQ0AU1AE9AE+ARo/25WC14B2qSacAogCTXjFVA7TcBCwKX/AwcmFKypL/6yAAAAAElFTkSuQmCC" InformativeScreenshot="07b3bd51c6b645138813856971a3859a.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="591, 470, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIbSURBVGhD7ZvRccIwDIY9LINkFNZon1ihHYMnNkgjxYIfIzsOYJOo0t3X2pKxo69x7/rQcLlcRuJwOIwUx+PRLF8/5/Gb+L1xJ0D7kCWKAkSCZRbfAOvhAmoFSM4azQWcTqcuaGfXsEsBIQQGc9rZNXQXoD38GubPj5HbPtrZNXQVwA8/7RWGWcLz7FUANT7tJQIwqF4Krfl/KECan+e4t3Z2DZsXMDf+2LwJATyOcB3md3DD9H0eD8PA33Fv7ewaPioAazm05s0IwKB6GmnzEvsXwI3FcYTrME+bD9R0rJkRgDUkbZ4axrrpK5A2L3kMMwJ4HOG65KYvPIbXHjEjAGtc59rcXPraIyavADeVNJYLc1dAGrpKiPkcZgRc87F5XFvCjAAMqueC1iJmBPA4wnWY3xGblebNXYElsHGamxGAQfVc0FpseN8CYjMEBtVzQWvlp0/sWMD04NDIs4hAzGln19BXQHzwd4F7a2fX0FzA1nEBLsAFuAAX4AJcgAtwAc8KCIH+MHlEW7tF3iZAq7XinWc2FSA1XKPlSuvTvDZfk0tpcgVyNcyVxmtqKVgrrROaX4G0jvPceE0tzWENxzk+dgVK4zW10loc52hyBQitlsvl9krz2tp0jnkc53hZwFpqHqonLwmQZjS09cRSvTfd34Ct4QJcgAtwAS5gSYD272ZWWBSgfcgSRQEiwTLVvwOshgt4EHAe/wDDYtq7ITV2TwAAAABJRU5ErkJggg==" InformativeScreenshot="ab127de1aa57c03fcc519a16370af123.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
                 </Sequence>
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
@@ -283,6 +261,24 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SaveExcel workflow" sap:VirtualizedContainerService.HintSize="412,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Excel\SaveExcel.XAML">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="ExcelName">
+                  <Literal x:TypeArguments="x:String">Detalles</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="767, 1, 47, 30" ElementType="Button" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;ctrl idx='1' name='Cerrar' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Cerrar' role='push button' check:text='Cerrar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAhCAYAAAB0v5O6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEmSURBVFhH7dXZaoQwFIDh3JT2Yd3eUMUVFxQRBRF8DtdTTsAyF5mhdKJNQn4IIzgX+TBHieM4INuybftnWZYF4zjCNE1AQLKO44B932HbNljXFUzThK7rYBgGNTBN00Df9/JhEHJilmWhmKqqoG1bNTBFUdCnIyUGIbjmeaaYLMugrmt5ZwbnBTGGYUCaplCWpRqYJEkgz3M1MFEU0aOmBCYMQ3rUuGMIIfTt8iy8h//5ayxMEAT0qHHH4GY/Pr+YoFf3fhsL4/s+xHF8zTFjbZoHBGNhPM+jc3PZzDxunhcEY2Fc16VzcxkGOxG8IJjGvNsJwd/H63e7HcPaPC/QrZhXm+YBuhXzHx/NW14AV6QxoqYxoqYxoqYxoqYxoqYxovYcE8I3NuwrT9U23Q0AAAAASUVORK5CYII=" InformativeScreenshot="cee7397bce474ba15a9525ad45566d51.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Cerrar" TextMethod="AttributeText" TextSelector="&lt;ctrl role='push button' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -295,6 +291,30 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mensaje del Servidor" sap:VirtualizedContainerService.HintSize="488,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="188, 94, 75, 23" ElementType="Button" FriendlyName="'Aceptar'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' check:text='Aceptar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVGhD7ZbbsYQgDECtinryayW04T+90IQN2EGWgCwPkX3EZa534sz5IMng5hh0p23bUPgOkcfgKU+u9655ntvy1nUVOizL0pcX18IRkcdA5DEQeQxEHoNx8qxGNSnUtpFjYxB+tvc5w+RZrRAAUGnbzPP41/IsagVoqEml0RY5anzCiQDzIuYEaQhxB5iq1hEeDt2vjqU9ABROh9/xOWPk0ZHdJRiITQdonQSlWKghCXGidkmx1pBEeiAxdzZ5lMvrcpk8hsgrhFHT9TQVTe+SMtKE5bX5urGPlxv36NQxGCDvKKM/MWcN1vF8XeVI3PNYduqY/F5eMWmB8ljWx6gVI6jxFKcPUFuQI7+nn8CbyqvfcZ5CaJDiJzLG/N+a9pT6l72PlxL8u9PFg9x8T8iE3UzedVzb+BWIPAY3kvf3EHkMRB4DkcegK4+SQp+mPAoK73GQJ3yOyPuaDR8UgMNEB+2uSwAAAABJRU5ErkJggg==" InformativeScreenshot="d73f6443cb4d3dcaa27e5c2acc566978.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='#32770' title='Mensaje del Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Aceptar" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Gerencial\gerencial.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVFhH7ZbRcYMwEETpiZ7oiW4oQD0peodWPhgFCQOxP7IzO9jS6fbpnHE8HCiO4xjdsyWrxZ31h4poWZY4z7M1bDQ9W38oayaFEEpT9taSjXLlqo76Y3GQJl40nKZp09AFWJhXrf6MrAEQ2I+VPQoEud9DtfpT4qACaDTPwd7rRtrzok77Cn93Aql5LEE0qTTLsasESh17V8KRAbgGxeO4rhFAoMI18v2ZeXj9jSR3KTV6jZbAmqkThKxJWY8U7B1TT9YJaMkAZImJyNTEsEIQKivcxFlnN4mmNgB7EPYxAPtx2/rkXieFKU0nTyGvN1UFkNmPId8SpcCq84SeA5ClFLhxgqD2eYA9iJsCtX8HIP8DfCsAr2neqxLIt95VAJ7Z3aoC6Cu4Gizn8DCuoWfHL10CUPg7n7/0K8AegjAPwPuPASj8YwD6/DE1XweQ/3t26REA/UzrAbEDdwPoR4t/pvVDFZArALzWzX14D4BkTbx7AXj60N6bt1QgjgCwbqpwDt+pAuIBWLv7xi1ZqOxv3Rc+DD+e/s8FBz31agAAAABJRU5ErkJggg==" InformativeScreenshot="9762d2a2020fd7e3f96197d6cb55768a.png" Selector="&lt;wnd app='gerencial.exe' cls='#32770' title='Mensaje del Servidor'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>

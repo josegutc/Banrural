@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,3775</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192,4079</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EditWordSignature_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -46,6 +46,8 @@
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -81,7 +83,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EditWordSignature" sap:VirtualizedContainerService.HintSize="765,3510" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EditWordSignature" sap:VirtualizedContainerService.HintSize="765,3814" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="15 de julio de 2021" Name="FechaHoy" />
       <Variable x:TypeArguments="x:String" Default="15 de Diciembre del 2020" Name="Fecha" />
@@ -130,32 +132,52 @@
       </ui:LookupDataTable.CellValue>
     </ui:LookupDataTable>
     <ui:CopyFile ContinueOnError="True" Destination="C:\Users\Propa34653\Desktop\EY\Banrural\Automatizacion_Banrural\Data\Input" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="723,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="Data\Input\Plantilla\Ejemplos de certificaciones.docx" />
-    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="C:\Users\Propa34653\Desktop\EY\Banrural\Automatizacion_Banrural\Data\Input\Ejemplos de certificaciones.docx" sap:VirtualizedContainerService.HintSize="723,2797" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="C:\Users\Propa34653\Desktop\EY\Banrural\Automatizacion_Banrural\Data\Input\Ejemplos de certificaciones.docx" sap:VirtualizedContainerService.HintSize="723,3101" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="689,2688" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="689,2992" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TraductorMes workflow" sap:VirtualizedContainerService.HintSize="647,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TraductorMes.XAML">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="Mes">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Mes" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="MesNom">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Mes" />
+                </OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <Assign sap:VirtualizedContainerService.HintSize="647,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Fecha]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[Dia + " de "+ MonthName( Int32.Parse(Mes), False ) + " del "+Anio]</InArgument>
+                <InArgument x:TypeArguments="x:String">[Dia + " de "+ Mes + " del "+Anio]</InArgument>
               </Assign.Value>
             </Assign>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TraductorMes workflow" sap:VirtualizedContainerService.HintSize="647,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="TraductorMes.XAML">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="Mes">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DateAndTime.Today.Month.ToString()" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="MesNom">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Mes" />
+                </OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <Assign sap:VirtualizedContainerService.HintSize="647,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[FechaHoy]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[DateAndTime.Today.Day.ToString() + " de "+ MonthName( DateAndTime.Today.Month, False)+" del "+DateAndTime.Today.Year.ToString()]</InArgument>
+                <InArgument x:TypeArguments="x:String">[DateAndTime.Today.Day.ToString() + " de "+ Mes +" del "+DateAndTime.Today.Year.ToString()]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="647,577" sap2010:WorkflowViewState.IdRef="CommentOut_1">

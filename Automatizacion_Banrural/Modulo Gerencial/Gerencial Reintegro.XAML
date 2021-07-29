@@ -4,11 +4,12 @@
     <x:Property Name="MesBusqueda" Type="InArgument(x:Int32)" />
     <x:Property Name="AnioBusqueda" Type="InArgument(x:Int32)" />
     <x:Property Name="Oficina" Type="InArgument(x:String)" />
+    <x:Property Name="OficinaBool" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,6562</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192,6954</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Gerencial_Reintegro_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -80,9 +81,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Gerencial_Reintegro" sap:VirtualizedContainerService.HintSize="1029,6497" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Gerencial_Reintegro" sap:VirtualizedContainerService.HintSize="1029,6769" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Mes" />
       <Variable x:TypeArguments="x:Int32" Name="Dia" />
@@ -93,19 +95,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="987,6405" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="987,6677" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="953,6116" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence sap:VirtualizedContainerService.HintSize="953,6388" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="911,6022" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="911,6294" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Default="1" Name="Count" />
               </Sequence.Variables>
@@ -131,19 +133,29 @@
                   <uix:TargetAnchorable DesignTimeRectangle="35, 170, 41, 19" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Moneda' /&gt;&lt;wnd cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Moneda' /&gt;&lt;wnd cls='Edit' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAXCAYAAACf+8ZRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVFhH7c7BCQAwCEPRrutW7uYCbtDiueIxGMiHnHJ5JzMv27jR7r56VYs2s5WLiBm9MaFRCY1KaFRCoxIaldCohEY1ouvcuhbN0IdmGiE67wM6qEELcSzFnQAAAABJRU5ErkJggg==" InformativeScreenshot="84875823f19d1e2493936d42c81080e3.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <If Condition="[Not Oficina = &quot;-1&quot;]" sap:VirtualizedContainerService.HintSize="869,675" sap2010:WorkflowViewState.IdRef="If_4">
-                <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="869,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Oficina]" />
+              <If Condition="[Not Oficina = &quot;-1&quot;]" sap:VirtualizedContainerService.HintSize="869,775" sap2010:WorkflowViewState.IdRef="If_4">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,626" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[OficinaBool]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
                     <uix:NClick ClickType="Single" DisplayName="Click 'oficina'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="171, 214, 57, 13" ElementType="RadioButton" FriendlyName="'oficina'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5OptionButton' title='oficina' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5OptionButton' title='oficina' check:fulltext='oficina' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAARCAYAAABuDKSkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADVSURBVFhH7ZRtCoQwDER7XW/l3bxAb+DShYHpODHdXYT1I/CoThLp+2Opta5345FW5nnucDNnxEpDcpqmjqvIb6RZVotz3RullNKdEVn/F0LpqJZleZ+6N8KRIp/QSWfCqG/FLy/dBIFmeM5m9eQ+Z5pnHCLtLqe5y1zeTp7R+Sx3/J00iPr6DYbn9jjkR6YXwDvnLmOifpaPYKWbGOS4ONc9ZuSiLnN51td8hI10AwVJlm3ldpR2CcBZ9BzNcqbv2AE8t4eVBlpu5ozsSl+VR/oe1PUFpeRyAqi8AB8AAAAASUVORK5CYII=" InformativeScreenshot="497aab7836681ea4f471a2c72926e55d.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="oficina" TextMethod="FullTextScrapping" TextSelector="&lt;wnd /&gt;">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target DesignTimeRectangle="35, 214, 65, 13" ElementType="RadioButton" FriendlyName="'banrural'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5OptionButton' title='banrural' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5OptionButton' title='banrural' check:fulltext='banrural' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAARCAYAAACLkmHIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADpSURBVFhH7ZQLCoQwEEN73d7Ku3mB3sClQiCN6UfYdaF24GEnk5Ya0JBSOhYlKxRDM5Rt2wqcZ0ZsKAghxljwlnAuoXAYWqzrPiaEYPV/cfc+1VBqte/7+dR9zFShuEDygRmuXjBTh4JAAGokFKY2Y41n6mUPz9TDvWpYj/CzUFq96jjf6apprzoz4nE88vlwj/OAzrlnfcSDnnGeHo/8aGuXu6N/yzOCDSW/OF6ei3Xdx4xe7o6u656He9V7XELJoBACh5HL7WHyJZjezHlqus5qHuA8PWwoQMt5ZqQZyltZoRhWKBfS8QFteRZc8nd64QAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" Text="banrural" TextMethod="FullTextScrapping" TextSelector="&lt;wnd /&gt;" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -153,19 +165,13 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'unchecked'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[Oficina]">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ThunderRT5TextBox'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[Oficina]">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable DesignTimeRectangle="35, 238, 41, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5TextBox' idx='4' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAXCAYAAACf+8ZRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVFhH7c7BCQAwCEPRrutW7uYCbtDiueIxGMiHnHJ5JzMv27jR7r56VYs2s5WLiBm9MaFRCY1KaFRCoxIaldCohEY1ouvcuhbN0IdmGiE67wM6qEELcSzFnQAAAABJRU5ErkJggg==" InformativeScreenshot="37625a3f3767642849611c4e5cef1214.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="FuzzySelector, Image">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                              <uix:Target DesignTimeRectangle="27, 150, 433, 49" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Moneda' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Moneda' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbUAAAA1CAYAAADGbXWxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAINSURBVHhe7dVhbuJADIDRXJdbcTcuwA26ympTzU6dkEBpx86z9ETiBjrtD77pfr9/AEAFogZAGaIGQBmiBkAZh6M2TdOh/Xf6id8BQF6iBkAZT0Wtj0u0ewdRA2DL26K27Nr9ct3v293Wvv1ZtAPg3D6jdr1eV/33hn8RWXvtr9v7+TV6buv5aN9r99H5Aahrns8etDFYm+WZv2/ogtO/9tft/da+t/X8ct1a9sYYY84zD6O23K/pw/Lour3fu18c/RwAziVF1J7dA3Au3xq1rf18v9h6pr3un+/37c/W9gCcx8tRA4BRiBoAZYgaAGWIGgBliBoAZYgaAGWIGgBliBoAZZwmavPfA8D4XmlP//7dUWsPMKL+7PPucrkAMLDb7fbl+/uI/vv/UNSiA40g+qcs5213AIzl16M24ogaQE6iFoyoAeQkasGIGkBOohaMqAHkJGrBiBpATqIWjKgB5CRqwYgaQE6iFoyoAeQkasGIGkBOohaMqAHkJGrBiBpATqIWjKgB5CRqwYgaQE6iFoyoAeQkasGsRW3eAzC2/vv7iJeiFh1mFP3ZjTHG5Jn2+/uIp6OWYaJzA1DX01EDgNGIGgBliBoAZYgaAGWIGgBliBoAZYgaAGWIGgBlbEYNALIJowYA2YkaAGUcjto0Tbt2vbVn9ry3tfX8K+foPXru6Ln3etfnAtR3//gDv8WNSZOiWBMAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
-                            </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
+                        <uix:TargetAnchorable DesignTimeRectangle="35, 238, 41, 19" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5TextBox' idx='4' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='ThunderRT5Frame' title='Unidad Administrativa' /&gt;&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAXCAYAAACf+8ZRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVFhH7c7BCQAwCEPRrutW7uYCbtDiueIxGMiHnHJ5JzMv27jR7r56VYs2s5WLiBm9MaFRCY1KaFRCoxIaldCohEY1ouvcuhbN0IdmGiE67wM6qEELcSzFnQAAAABJRU5ErkJggg==" InformativeScreenshot="ace39f8b20588633898f03f4cb768475.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
                   </Sequence>
-                </If.Else>
+                </If.Then>
               </If>
               <uix:NClick ClickType="Double" DisplayName="Click 'C O'" sap:VirtualizedContainerService.HintSize="869,166" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
                 <uix:NClick.Target>
@@ -192,7 +198,7 @@
                   <uix:TargetAnchorable DesignTimeRectangle="491, 216, 57, 25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title='Fecha de Corte' /&gt;&lt;wnd cls='Button' title='Cambiar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title='Fecha de Corte' /&gt;&lt;wnd cls='Button' title='Cambiar' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAdCAYAAAAZzmTfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADXSURBVFhH7ZELCsQgDEQ9rAfrEb1Bl4BZplm1frKFxggP0slg+2hIKZ274dIxRrOg51eaFlbPcRwXcfPSJNwlzZkFXDpnLs2HMwssSYcQfij1Zmjdt/quaenSi1c/BtG8S6IqrclrpbkjuzJHWh25q3VLOWfEY38a+6Pz3Q7p6T36p7k/OvfukFKP+Zu03OPz6KzRQ1SlMZP72q5n1ugh09IEX4r07EdmhHLZa3VxRpak34pL58yl+XBmAZfOmUvT4ZI1qtKlshWK0ixuFfS8SO/ChtLp/AA4K/wMKdTBhgAAAABJRU5ErkJggg==" InformativeScreenshot="ab5f0f09d705be1c60816ae58ae6467e.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <Sequence sap:VirtualizedContainerService.HintSize="869,356" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence sap:VirtualizedContainerService.HintSize="869,357" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -315,7 +321,7 @@
                   </uix:NClick>
                 </If.Else>
               </If>
-              <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="869,505" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+              <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="869,545" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
                 <ui:InterruptibleWhile.Body>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,340" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
