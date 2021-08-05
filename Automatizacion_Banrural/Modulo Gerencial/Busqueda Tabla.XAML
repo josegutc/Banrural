@@ -1,15 +1,17 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Busqueda_Tabla" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Busqueda_Tabla" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="NombreCobis" Type="InArgument(x:String)" />
     <x:Property Name="OficinaBool" Type="InArgument(x:Boolean)" />
+    <x:Property Name="NumReferencia" Type="InArgument(x:String)" />
+    <x:Property Name="Factura" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,2659</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192,2522</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Busqueda_Tabla_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -54,10 +56,10 @@
       <x:String>UiPath.Shared.ObjectLibrary</x:String>
       <x:String>UiPath.CV.Activities</x:String>
       <x:String>UiPath.CV.Activities.Interfaces</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -94,14 +96,15 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Busqueda_Tabla" sap:VirtualizedContainerService.HintSize="530,2434" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Busqueda_Tabla" sap:VirtualizedContainerService.HintSize="676,2457" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="ButtonActive" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Matches" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="Count" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="i" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DetallesDT" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -109,13 +112,13 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="488,1753" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: C O B I S   Gerencial - 2.1.5 " sap:VirtualizedContainerService.HintSize="634,1598" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="454,1464" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="454,1309" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="DataTable" />
               <Variable x:TypeArguments="x:Int32" Default="-1" Name="Row" />
@@ -126,7 +129,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,563" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,523" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,358" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -161,7 +164,7 @@
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetExcelData workflow" sap:VirtualizedContainerService.HintSize="412,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Modulo Gerencial\GetExcelData.XAML">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="ExcelName">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;Consolidados&quot;  + DateTime.Now.ToString(&quot;mm-ss&quot;)" />
+                  <Literal x:TypeArguments="x:String">Consolidados</Literal>
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Descripcion">
                   <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NombreCobis" />
@@ -173,13 +176,13 @@
             </ui:InvokeWorkflowFile>
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="412,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="242,507" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="454,507" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'C O'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'C O'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable Accuracy="1" DesignTimeRectangle="74, 171, 87, 14" FriendlyName="'C O'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAOCAYAAABaSYBTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVFhH7dAxCsAgEAVRj52bepwNKQTz2UrGbhYeyGD1x3hm6ZI2ipHhu2w6tB77/T7oXAbHBWVwXFAGxwVlcFxQBscFZXBcUAbHBbVRjDaK0UYBZr18Gwo8IB8ImQAAAABJRU5ErkJggg==" InformativeScreenshot="d9a44e3e59e2524df05308c4af950c85.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Image" TargetType="ImageBased" Text="C O B I S   Gerencial - 2.1.5" TextMethod="AttributeText" />
                     </uix:NClick.Target>
@@ -190,7 +193,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                  <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
                     <ui:InterruptibleWhile.Body>
                       <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
@@ -219,7 +222,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InterruptibleWhile>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="591, 226, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Detalle' cls='Button' title='&amp;amp;Detalle' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Detalle' cls='Button' title='&amp;amp;Detalle' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVGhD7ZvLccIwEIbdU1qgFIYWuKYN32gjOVEAl6QMTnQgtIYFIf96+LGSrFFmvoks7dr6P+QDB7rb7aaI/X4/cDqdquXn76p+if83HwJMETXiFVB7eCJ4Amr/awJiBfBcbTQBWxWg+n4ArU1hkwI4/BoSNidgt9uNBKjDAdbGsCkBFP58Pn9K0OEZ1BNiMwI4PDNIMMJXLUBdvvQOupeEXn/yx+PxQwLqi6F4ARyeodAUnqFr1BdL0QLs8LaEpeGJYgW4wqv+wRrhiSIFhMLTOuqbQ3ECUoYnihKQOjxRjIAc4YkiBOQKT2QXkDM8ISJgCBWLL3xPNfq/BXrmXGQFKP1lxcWl1/l0oCnhX73vOfT8KcgJGDbqkaAFjCS4wsP+9zraQyzyJ8Al4SngJQGFR30mK0hIcwKAhK6jsPqb3JOHhGd4q9ZJ0QICEkiALYHXolkYnkh7AiwJi+EToE8O2kcMIgKIJBIGAfp+9OrMlCAmgEgZ/jE3XYKIAH6/h3ccSRAE7ceH2AnwShAE7cWH6CvglCAI2ocPUQEElCAI2oMPcQHESIIg6Pk+kgggTAmSoGf7SCagVJqAJqAJWFdA131DUO0czPutcW8xAaE5m5gawqyL7fGRRQBfL5mzx676EMkFxIxtXHUx4xDZBJiE+sy10NiE7+Mj6wlw1djXU8dTEBNg46pB86iO511ju57nQqwuYGusKsD8BBCoJzftBDQBTUAT0AQ0AQEB6Pd2tRAUgJpqwiuAJdRMUEDtNAEjAVd1B5mpycbQUAEFAAAAAElFTkSuQmCC" InformativeScreenshot="e43020f9b119eda3e9fea03ea570292a.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                     </uix:NClick.Target>
@@ -230,7 +233,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="591, 226, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Siguientes' cls='Button' title='Siguien&amp;amp;tes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Siguientes' cls='Button' title='Siguien&amp;amp;tes' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVGhD7Zs9csIwEEZ9ydyA4Qq0KXMFOurcIMkVaJI+F6DiBo6/mLXW69UflozQiJk3lldS7O8heUyR7nq99mC32/X4nE6navn4vvSf4McwE6BNqgmnAJJQM94VUPunCQgVQLXaaAKagMwCuq5Lgva3U5BVAG687/eMo4ezlVwyNhHwNRzPN34Fw6Dp+M8UeH/jZaqZvnQSNloBR6+EiSnkYcBIILiEFCI2eQbQEg+SMAVEcLcEEqFdN5TsAgCXQAKsEqZgFF6XQCKKF2BbAVYJMwFuCWbs/RI2E4DwhEsChTLh8krY4CFovv0QCTw8xyehaAEI/D7gkwBkcI5NwthXmAD+7VN4KYGCcRlUs6FJMH3xErILOA5HBLeFJ0iCrEv0ZwLeNQoVgOBSggxFuPo4moSxXvAK4BJkoFjG4JzxbbNAAef/4FKCDBTLUsBhqBcq4O0WnEuQgWJ5KgEIzCWkEYCwTyKAwnMJMpAGQmp1MAqYSyhWAEB4TogECmmrcxC+OAGAr4J7BYwB9brpxzE+PHiIAIIHkyxD6uFB8QKAJsC1ErqOWAaWFCsA+FYB0EQYAW4J4/7H22DhAoAWHkAAoQvQJawND7ILACESgFsAkOHRvj882EQACF0JbgGAS8BvgCdYAUSIBL8AkE7CpgIAl0DECwBpJGwuAOBGCS5ijtnnc8awGk8joCSagCagCYgT0HWvM2SdzmNYM3ctUQLkjT7yxom197BKAEf20Tmvh7TlXK1mq7tqsk59WbbAo9ox44hVD0HbBVK0OaFzXfNlH9WSPQNytDm2MbytnWvwMVm2QMg4XudtOUbWXOPlua3G66u2QAjygqWRRQA3nTN8iutkXwGl0wQ0AU1AE9AE+ARo/25WC14B2qSacAogCTXjFVA7TcBCwKX/AwcmFKypL/6yAAAAAElFTkSuQmCC" InformativeScreenshot="07b3bd51c6b645138813856971a3859a.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                     </uix:NClick.Target>
@@ -241,7 +244,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="591, 470, 60, 57" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Área de trabajo' cls='MDIClient' /&gt;&lt;wnd cls='ThunderRT5Form' title='Transacciones de Caja' /&gt;&lt;wnd cls='AfxWnd40' title=' ' /&gt;&lt;wnd aaname='Exportar' cls='Button' title='&amp;amp;Exportar' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAA9CAYAAAAd1W/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIbSURBVGhD7ZvRccIwDIY9LINkFNZon1ihHYMnNkgjxYIfIzsOYJOo0t3X2pKxo69x7/rQcLlcRuJwOIwUx+PRLF8/5/Gb+L1xJ0D7kCWKAkSCZRbfAOvhAmoFSM4azQWcTqcuaGfXsEsBIQQGc9rZNXQXoD38GubPj5HbPtrZNXQVwA8/7RWGWcLz7FUANT7tJQIwqF4Krfl/KECan+e4t3Z2DZsXMDf+2LwJATyOcB3md3DD9H0eD8PA33Fv7ewaPioAazm05s0IwKB6GmnzEvsXwI3FcYTrME+bD9R0rJkRgDUkbZ4axrrpK5A2L3kMMwJ4HOG65KYvPIbXHjEjAGtc59rcXPraIyavADeVNJYLc1dAGrpKiPkcZgRc87F5XFvCjAAMqueC1iJmBPA4wnWY3xGblebNXYElsHGamxGAQfVc0FpseN8CYjMEBtVzQWvlp0/sWMD04NDIs4hAzGln19BXQHzwd4F7a2fX0FzA1nEBLsAFuAAX4AJcgAtwAc8KCIH+MHlEW7tF3iZAq7XinWc2FSA1XKPlSuvTvDZfk0tpcgVyNcyVxmtqKVgrrROaX4G0jvPceE0tzWENxzk+dgVK4zW10loc52hyBQitlsvl9krz2tp0jnkc53hZwFpqHqonLwmQZjS09cRSvTfd34Ct4QJcgAtwAS5gSYD272ZWWBSgfcgSRQEiwTLVvwOshgt4EHAe/wDDYtq7ITV2TwAAAABJRU5ErkJggg==" InformativeScreenshot="ab127de1aa57c03fcc519a16370af123.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                     </uix:NClick.Target>
@@ -274,10 +277,16 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left">
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="412,51" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="767, 1, 47, 30" ElementType="Button" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;ctrl idx='1' name='Cerrar' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Cerrar' role='push button' check:text='Cerrar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAhCAYAAAB0v5O6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEmSURBVFhH7dXZaoQwFIDh3JT2Yd3eUMUVFxQRBRF8DtdTTsAyF5mhdKJNQn4IIzgX+TBHieM4INuybftnWZYF4zjCNE1AQLKO44B932HbNljXFUzThK7rYBgGNTBN00Df9/JhEHJilmWhmKqqoG1bNTBFUdCnIyUGIbjmeaaYLMugrmt5ZwbnBTGGYUCaplCWpRqYJEkgz3M1MFEU0aOmBCYMQ3rUuGMIIfTt8iy8h//5ayxMEAT0qHHH4GY/Pr+YoFf3fhsL4/s+xHF8zTFjbZoHBGNhPM+jc3PZzDxunhcEY2Fc16VzcxkGOxG8IJjGvNsJwd/H63e7HcPaPC/QrZhXm+YBuhXzHx/NW14AV6QxoqYxoqYxoqYxoqYxoqYxovYcE8I3NuwrT9U23Q0AAAAASUVORK5CYII=" InformativeScreenshot="cee7397bce474ba15a9525ad45566d51.png" ScopeSelectorArgument="&lt;wnd app='gerencial.exe' cls='ThunderRT5MDIForm' title='C O B I S   Gerencial - 2.1.5 ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Cerrar" TextMethod="AttributeText" TextSelector="&lt;ctrl role='push button' /&gt;" />
               </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
           </Sequence>
         </ActivityAction>
@@ -292,7 +301,190 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mensaje del Servidor" sap:VirtualizedContainerService.HintSize="488,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+    <Flowchart DisplayName="Realizar Match en Detalles" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107</av:PointCollection>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID1</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,107</av:Point>
+            <av:Size x:Key="ShapeSize">200,66</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,173 300,207</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Eliminar Columnas de Excel y Volver a Leer" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,322" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\Propa34653\Desktop\EY\Automatizacion_Banrural\Data\Input\Detalles.xlsx">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,213" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelInsertDeleteRows DisplayName="Insert/Delete Rows" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteRows_1" Mode="Remove" NoRows="7" Position="1" SheetName="Hoja1" />
+                  <ui:ExcelReadRange AddHeaders="True" DataTable="[DetallesDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Hoja1">
+                    <ui:ExcelReadRange.Range>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </ui:ExcelReadRange.Range>
+                  </ui:ExcelReadRange>
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExcelApplicationScope>
+        </Sequence>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID0">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">200,207</av:Point>
+                <av:Size x:Key="ShapeSize">200,66</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="476,1583" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="FinalDetallesDT" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Numero Referencia: &quot; + NumReferencia.Trim]" />
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DetallesDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="434,300" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[row(6)]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row(6).ToString.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+              <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[NumReferencia]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">78323191</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:FilterDataTable DataTable="[DetallesDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[FinalDetallesDT]" SelectColumnsMode="Keep">
+                <ui:FilterDataTable.Filters>
+                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                    <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                      <ui:FilterOperationArgument.Column>
+                        <InArgument x:TypeArguments="x:String">["Cuenta"]</InArgument>
+                      </ui:FilterOperationArgument.Column>
+                      <ui:FilterOperationArgument.Operand>
+                        <InArgument x:TypeArguments="x:String">[NumReferencia]</InArgument>
+                      </ui:FilterOperationArgument.Operand>
+                    </ui:FilterOperationArgument>
+                  </scg:List>
+                </ui:FilterDataTable.Filters>
+                <ui:FilterDataTable.SelectColumns>
+                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                    <x:Null />
+                  </scg:List>
+                </ui:FilterDataTable.SelectColumns>
+              </ui:FilterDataTable>
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\Propa34653\Desktop\EY\Automatizacion_Banrural\Data\Input\Detalles-Final.xlsx">
+                <ui:ExcelApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExcelWriteRange AddHeaders="True" DataTable="[FinalDetallesDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Hoja1" StartingCell="A1" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ExcelApplicationScope.Body>
+              </ui:ExcelApplicationScope>
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[FinalDetallesDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="434,493" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,345" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Factura: &quot; + row(&quot;Factura&quot;).ToString]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[Factura]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("Factura").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEachRow>
+            </Sequence>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mensaje del Servidor" sap:VirtualizedContainerService.HintSize="634,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -315,6 +507,12 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp FilePath="C:\Cobis3\Gerencial\gerencial.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVFhH7ZbRcYMwEETpiZ7oiW4oQD0peodWPhgFCQOxP7IzO9jS6fbpnHE8HCiO4xjdsyWrxZ31h4poWZY4z7M1bDQ9W38oayaFEEpT9taSjXLlqo76Y3GQJl40nKZp09AFWJhXrf6MrAEQ2I+VPQoEud9DtfpT4qACaDTPwd7rRtrzok77Cn93Aql5LEE0qTTLsasESh17V8KRAbgGxeO4rhFAoMI18v2ZeXj9jSR3KTV6jZbAmqkThKxJWY8U7B1TT9YJaMkAZImJyNTEsEIQKivcxFlnN4mmNgB7EPYxAPtx2/rkXieFKU0nTyGvN1UFkNmPId8SpcCq84SeA5ClFLhxgqD2eYA9iJsCtX8HIP8DfCsAr2neqxLIt95VAJ7Z3aoC6Cu4Gizn8DCuoWfHL10CUPg7n7/0K8AegjAPwPuPASj8YwD6/DE1XweQ/3t26REA/UzrAbEDdwPoR4t/pvVDFZArALzWzX14D4BkTbx7AXj60N6bt1QgjgCwbqpwDt+pAuIBWLv7xi1ZqOxv3Rc+DD+e/s8FBz31agAAAABJRU5ErkJggg==" InformativeScreenshot="9762d2a2020fd7e3f96197d6cb55768a.png" Selector="&lt;wnd app='gerencial.exe' cls='#32770' title='Mensaje del Servidor'/&gt;" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>

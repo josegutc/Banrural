@@ -1,8 +1,10 @@
 {
   "name": "Automatizacion_Banrural",
   "description": "Robotic Enterprise Framework",
-  "main": "EditWordSignature.XAML",
+  "main": "Contabilidad\\ContabilidadLogin.XAML",
   "dependencies": {
+    "ClosedXML": "[0.95.4]",
+    "System.ComponentModel.Annotations": "[5.0.0]",
     "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
     "UiPath.UIAutomation.Activities": "[20.10.6]",
@@ -86,6 +88,36 @@
     {
       "filePath": "Process.xaml",
       "uniqueId": "8a65dc7c-8b54-4aef-a7e4-115beac0ffb7",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Modulo Gerencial\\NombresEmpresasContraCobis.xaml",
+      "uniqueId": "6227be41-2a14-456c-8e46-605cb0dd6a0d",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "PortalAsistencia\\SubidaDocumentoCertificacion.XAML",
+      "uniqueId": "83507ae2-e758-4cf1-a808-27ab5a341de7",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Test.XAML",
+      "uniqueId": "28f5e91c-ba3e-4005-8a49-0698b3d577ab",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Contabilidad\\ContabilidadLogin.XAML",
+      "uniqueId": "c6e85e21-75f5-4fe2-a854-c0456b8a26fb",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Contabilidad\\BusquedaContable.XAML",
+      "uniqueId": "3c2636f4-c040-425c-81cc-3b546aa865b4",
       "input": [],
       "output": []
     }

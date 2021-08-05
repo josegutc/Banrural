@@ -1,15 +1,18 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NombreEmpresasContraCobis" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NombreEmpresasContraCobis" this:NombreEmpresasContraCobis.Empresa="CLARO" this:NombreEmpresasContraCobis.Mes="7" this:NombreEmpresasContraCobis.Anio="2021" this:NombreEmpresasContraCobis.Dia="20" this:NombreEmpresasContraCobis.Oficina="1" this:NombreEmpresasContraCobis.NumReferencia="123" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Empresa" Type="InArgument(x:String)" />
     <x:Property Name="Mes" Type="InArgument(x:String)" />
     <x:Property Name="Anio" Type="InArgument(x:String)" />
     <x:Property Name="Dia" Type="InArgument(x:String)" />
     <x:Property Name="Oficina" Type="InArgument(x:String)" />
+    <x:Property Name="NumReferencia" Type="InArgument(x:String)" />
+    <x:Property Name="Factura" Type="OutArgument(x:String)" />
+    <x:Property Name="NomEmpresa" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,3236</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1648,3455</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_Gerencial_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -86,7 +89,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Lectura Empresas con Nombre Cobis" sap:VirtualizedContainerService.HintSize="1195,2971" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Lectura Empresas con Nombre Cobis" sap:VirtualizedContainerService.HintSize="1658,3270" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="EmpresasDT" />
       <Variable x:TypeArguments="x:String" Name="RowNumber" />
@@ -100,7 +103,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Buscar el Rango de la empresa en Cobis" sap:VirtualizedContainerService.HintSize="1153,2879" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence DisplayName="Buscar el Rango de la empresa en Cobis" sap:VirtualizedContainerService.HintSize="1616,3178" sap2010:WorkflowViewState.IdRef="Sequence_9">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:WorkbookApplication" Name="EmpresasWB" />
       </Sequence.Variables>
@@ -110,20 +113,20 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1111,2787" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" Workbook="[EmpresasWB]" WorkbookPath="Data\Input\Empresas.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1574,3086" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" Workbook="[EmpresasWB]" WorkbookPath="C:\Users\Propa34653\Desktop\EY\Empresas.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1077,2638" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1540,2977" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="1035,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign sap:VirtualizedContainerService.HintSize="1498,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[Empresa]</OutArgument>
                 </Assign.To>
@@ -131,15 +134,15 @@
                   <InArgument x:TypeArguments="x:String">[Empresa.TrimStart]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1035,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Empresa]" />
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[EmpresasDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1035,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Hoja1">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1498,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Empresa]" />
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[EmpresasDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1498,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Hoja1">
                 <ui:ExcelReadRange.Range>
                   <InArgument x:TypeArguments="x:String">
                     <Literal x:TypeArguments="x:String" Value="" />
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[EmpresasDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1035,669" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[EmpresasDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1498,669" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
@@ -181,101 +184,119 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <ui:ExcelReadCell Cell="[&quot;C&quot; + RowNumber]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1035,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="Hoja1">
+              <ui:ExcelReadCell Cell="[&quot;C&quot; + RowNumber]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1498,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="Hoja1">
                 <ui:ExcelReadCell.Result>
                   <OutArgument x:TypeArguments="x:String">[CellResult]</OutArgument>
                 </ui:ExcelReadCell.Result>
               </ui:ExcelReadCell>
-              <Sequence DisplayName="Realiza la busqueda en cobis" sap:VirtualizedContainerService.HintSize="1035,1408" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence DisplayName="Realiza la busqueda en cobis" sap:VirtualizedContainerService.HintSize="1498,1747" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[CellResult.Count &gt; 2]" sap:VirtualizedContainerService.HintSize="993,1316" sap2010:WorkflowViewState.IdRef="If_2">
+                <If Condition="[CellResult.Count &gt; 2]" sap:VirtualizedContainerService.HintSize="1456,1655" sap2010:WorkflowViewState.IdRef="If_2">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="520,1169" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <Sequence sap:VirtualizedContainerService.HintSize="983,1508" sap2010:WorkflowViewState.IdRef="Sequence_13">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelReadRange AddHeaders="False" DataTable="[CobisDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="478,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="[CellResult]" SheetName="Hoja1" />
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[CobisDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="478,978" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                      <ui:ExcelReadRange AddHeaders="False" DataTable="[CobisDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="941,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="[CellResult]" SheetName="Hoja1" />
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[CobisDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="941,1317" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="428,831" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="891,1170" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="386,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[RowName]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="386,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[row(0).ToString]" />
-                              <Sequence DisplayName="Descargas COBIS" sap:VirtualizedContainerService.HintSize="386,508" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Aqui estan las 3 actividades de Gerencial" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Modulo Gerencial\Login Gerencial.xaml">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Mes">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Mes" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Anio">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Anio" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Oficina">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Oficina" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Dia">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Dia" />
-                                    </InArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gerencial Reintegro workflow" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Modulo Gerencial\Gerencial Reintegro.XAML">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="DiaBusqueda">
-                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Int32.Parse(Dia)" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="MesBusqueda">
-                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Int32.Parse(Mes)" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="AnioBusqueda">
-                                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Int32.Parse(Anio)" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Oficina">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Oficina" />
-                                    </InArgument>
-                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="OficinaBool">
-                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="OficinaBool" />
-                                    </OutArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Busqueda Tabla workflow" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Modulo Gerencial\Busqueda Tabla.XAML">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="NombreCobis">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RowName" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:Boolean" x:Key="OficinaBool">
-                                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="OficinaBool" />
-                                    </InArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                              </Sequence>
+                              <If Condition="[String.IsNullOrEmpty(Factura)]" sap:VirtualizedContainerService.HintSize="849,1078" sap2010:WorkflowViewState.IdRef="If_3">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="428,931" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="386,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[RowName]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="386,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[row(0).ToString]" />
+                                    <Sequence DisplayName="Descargas COBIS" sap:VirtualizedContainerService.HintSize="386,608" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Aqui estan las 3 actividades de Gerencial" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Modulo Gerencial\Login Gerencial.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Mes">[Mes]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Anio">[Anio]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Oficina">[Oficina]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Dia">[Dia]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gerencial Reintegro workflow" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Modulo Gerencial\Gerencial Reintegro.XAML">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="DiaBusqueda">[Int32.Parse(Dia)]</InArgument>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="MesBusqueda">[Int32.Parse(Mes)]</InArgument>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="AnioBusqueda">[Int32.Parse(Anio)]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Oficina">[Oficina]</InArgument>
+                                          <OutArgument x:TypeArguments="x:Boolean" x:Key="OficinaBool">[OficinaBool]</OutArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Busqueda Tabla workflow" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Modulo Gerencial\Busqueda Tabla.XAML">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="NombreCobis">
+                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RowName" />
+                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:Boolean" x:Key="OficinaBool">
+                                            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="OficinaBool" />
+                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="NumReferencia">
+                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NumReferencia" />
+                                          </InArgument>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="Factura">
+                                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Factura" />
+                                          </OutArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                      <Assign sap:VirtualizedContainerService.HintSize="344,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[NomEmpresa]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[RowName]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Breaking&quot;]" />
+                                    <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                  </Sequence>
+                                </If.Else>
+                              </If>
                             </Sequence>
                           </ActivityAction>
                         </ui:ForEachRow.Body>
@@ -289,7 +310,7 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="428,799" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence sap:VirtualizedContainerService.HintSize="428,899" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -308,7 +329,7 @@
                           <InArgument x:TypeArguments="x:String">[CellResult]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Sequence DisplayName="Descargas COBIS" sap:VirtualizedContainerService.HintSize="386,508" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence DisplayName="Descargas COBIS" sap:VirtualizedContainerService.HintSize="386,608" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -317,10 +338,18 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Aqui estan las 3 actividades de Gerencial" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Modulo Gerencial\Login Gerencial.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="Mes">[Mes]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="Anio">[Anio]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="Oficina">[Oficina]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="Dia">[Dia]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Mes">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Mes" />
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Anio">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Anio" />
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Oficina">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Oficina" />
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Dia">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Dia" />
+                            </InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gerencial Reintegro workflow" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Modulo Gerencial\Gerencial Reintegro.XAML">
@@ -350,8 +379,22 @@
                             <InArgument x:TypeArguments="x:Boolean" x:Key="OficinaBool">
                               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="OficinaBool" />
                             </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="NumReferencia">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NumReferencia" />
+                            </InArgument>
+                            <OutArgument x:TypeArguments="x:String" x:Key="Factura">
+                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Factura" />
+                            </OutArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
+                        <Assign sap:VirtualizedContainerService.HintSize="344,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[NomEmpresa]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[RowName]</InArgument>
+                          </Assign.Value>
+                        </Assign>
                       </Sequence>
                     </Sequence>
                   </If.Else>

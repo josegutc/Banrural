@@ -1,0 +1,210 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ContabilidadLogin" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1192,3636" sap2010:WorkflowViewState.IdRef="ContabilidadLogin_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ContabilidadLogin" sap:VirtualizedContainerService.HintSize="552,3531" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: COBI$ - CONTABILIDAD 3.2.4" sap:VirtualizedContainerService.HintSize="510,3439" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="476,3150" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Credencial Cobis CCA" DisplayName="Get Credential" FolderPath="Predeterminada (Clásica)" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" />
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 31, 65, 19" FriendlyName="'Conexión'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='1' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Conexión' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Conexión' role='menu item' automationid='' check:text='Conexión' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAXCAYAAABdy4LVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVFhH7ZXNbcUgDMezT2djhHfm3E7AqZ2BMXKtOgDHKAu4mI/EEDeBV/T6pPonoQiMsfljyDS9fcLL7R2EHRGFQURhEFEYRBQGEYVBRGHoFMWB1QqUSk1bP/JAnAWtNNg66GyG5tIuSkhIgZlTH/Fjlvb/hBnM4MNpFCVWSCHIs+Dc8GptEyVUifFnckKqpHy1dgH9SWLJW1/iyaZp/Rd+GCMewDanuBpprex+b8wL2kU5LVFMgiQVks3JR5vKRtzkJnC1SW+LyeM4zsnfDJ0f1+2Pec2YSmHss8kJ040gpB/89pMOrdgIPX2k9r0jZgNj3pRfifKD2M8viodL0icW/z4YlNiKhM8SjH7H+47j6J+/maNvf8xr2kVBQmBS6vSdKWxnCVX9ek3jhSYPrbO68aHtiHlBnyj/BBGFYZpev7woH6krICIKwybKuq7SUttEWZZFWmpyfQ4AfAM3LIYA8LGtpwAAAABJRU5ErkJggg==" InformativeScreenshot="3d928151d399719acd960f49b1bcb4b8.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='ThunderRT5MDIForm' title='COBI$ - CONTABILIDAD 3.2.4' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Conexión" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 3, 215, 22" FriendlyName="'Log on'" FullSelectorArgument="&lt;ctrl name='Conexión' role='popup menu' /&gt;&lt;ctrl automationid='2' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Conexión' role='popup menu' /&gt;&lt;ctrl automationid='2' role='menu item' check:text='Log on' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANsAAAAaCAYAAAA+NylRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEdSURBVHhe7djbEYIwEEDRNJV+0s02k17SCkMDq0GCxNcoj52A9+P8sCT64R0Dru97BbA/YgOMTLF1XWdq/iWAf0BsgBFiA4wQG2CE2AAjxAYYaSi2qMF5lfR4HTgHYgOMEBtg5BixJVHvnLpRiK9nXmTBHuPnSphmXlK9FtjAAWLL12dxDNGU++pZEn+NZdkeLsTbLObogsZqPbBe+7ENYdQ//hjGcPLMi6ZptmCPpzVv9gBWIjZig5GDHiNLOPXst2PkfA9iw/4ai+3+AqN6UTHEUa4/hDA8Y5X7v31B8ikuYsM+GoptAy+Oi0ArThVbfg5z1TMc0I6Dx5ZUfDkaZvyroV3nOkYCDSM2wAixAUaIDTBCbIARYgNM9HoBPFVFNnMXijgAAAAASUVORK5CYII=" InformativeScreenshot="bb8d7ee490bb30a5e47bcb804b7929a9.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Log on" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" SecureText="[Password]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="88, 80, 138, 19" ElementType="InputBox" FriendlyName="'ThunderRT5TextBox'" FullSelectorArgument="&lt;wnd cls='ThunderRT5TextBox' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ThunderRT5TextBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAXCAYAAADdlHeDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABrSURBVGhD7dTBDYMwAARBinWh7swoD/gkBHnfM9J1sLpjzrk+G2OYve7q5Q7HbGcex7b2Mxz4RzgkwiERDolwSIRDIhwS4ZAIh0Q4JMIhEQ6JcEiEQyIcEuGQCIfkMRyzt32FY7Yz4VjYXCe0ATRZBX7/DQAAAABJRU5ErkJggg==" InformativeScreenshot="86185f8393183aef28b1df33dd25d64e.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='ThunderRT5Form' title='Conexión con el Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="250, 34, 79, 25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAdCAYAAADW4FAcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dXBDYUgEEVRimVDV5RCLzRAB/6w0BAcEf0vMJJnchYwuLnBaEIIG2EwJtAR01pLL4kx+Tx7nHPtmDFG6uC974uZUqIbjAnEmECMCaQ6pjHmRJpfrUdTG1MKU++V63o2wxIx6/1ZlolZnpuFMYH4mQPxBwS0TExpPZramNkepyTN7/ZGUR3za1TG3G9Xi/TebLyZQIwJxJhAjAnUFTMfoj7NmHlIz1zGpHdOMel/jAkTth8N6bjO8o/lBQAAAABJRU5ErkJggg==" InformativeScreenshot="af4192d0be2098e4986ac5d6e0efb3ad.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='ThunderRT5Form' title='Conexión con el Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Copyright" sap:VirtualizedContainerService.HintSize="434,547" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="215, 185, 75, 23" ElementType="Button" FriendlyName="'Aceptar'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' check:text='Aceptar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVGhD7ZbbsYQgDECtinryayW04T+90IQN2EGWgCwPkX3EZa534sz5IMng5hh0p23bUPgOkcfgKU+u9655ntvy1nUVOizL0pcX18IRkcdA5DEQeQxEHoNx8qxGNSnUtpFjYxB+tvc5w+RZrRAAUGnbzPP41/IsagVoqEml0RY5anzCiQDzIuYEaQhxB5iq1hEeDt2vjqU9ABROh9/xOWPk0ZHdJRiITQdonQSlWKghCXGidkmx1pBEeiAxdzZ5lMvrcpk8hsgrhFHT9TQVTe+SMtKE5bX5urGPlxv36NQxGCDvKKM/MWcN1vF8XeVI3PNYduqY/F5eMWmB8ljWx6gVI6jxFKcPUFuQI7+nn8CbyqvfcZ5CaJDiJzLG/N+a9pT6l72PlxL8u9PFg9x8T8iE3UzedVzb+BWIPAY3kvf3EHkMRB4DkcegK4+SQp+mPAoK73GQJ3yOyPuaDR8UgMNEB+2uSwAAAABJRU5ErkJggg==" InformativeScreenshot="c58d83781e249815fc27ce02674834fc.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='#32770' title='Copyright' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Aceptar" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp FilePath="C:\Cobis3\Conta\cobconta.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVFhH7ZEBDoMwDAN5Ok/jZ6xuE3ADWaCMIk2cZHVLk9jdhpd/Y5azOzCegXzuxmLMSP0SusRbluvMOI5ZivScplo8TVOW1EF1D6wxI/0h2ihjNRwCp+IZ27rsDslDOPfwQjBeIIA5mEQ0hfCMbR1zMIloCsF4gQDmYBLRFMIztnXMwSSiKQTjBQKYg0lEU4gDxqpDNIWw4F536b6kQyyDOBm9Y9kQWldjEwAKSU1lkRncXcq/iNcjOkxqRoD9F3vyjZc9p5DBovWFHKyc3425P+sUtMALsQbQ7+Wu7hE1IYuKvBC2T2smXDOytGgbglUb/yoAEIOi6O9QoW/tvS3E/cZMWra+uqcxswnQy5jJRk8YM48Zv1xkGD5MQ1l5SSOIwgAAAABJRU5ErkJggg==" InformativeScreenshot="d659d40045bceb90ba43211205de6d27.png" Selector="&lt;wnd app='cobconta.exe' cls='#32770' title='Copyright'/&gt;" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="254, 32, 79, 25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAdCAYAAADW4FAcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVGhD7dpBDkQwGIbhnhUJTlXHaIhwFg7AXvgnTCRiOm1N/lRHvibPoi2bNxULRNu2BNc0TbOp65qqqqKyLEkpRYj5A2vMJEnggjiOKYqijTYmhttYloXmeaY0Tc0x+74Hi67rSErpFnMcRzAYhgExuSAmI8RkFHxMIcQH3f63uU9Bx9SFOa8d5+c93x4T87x+h0fFPF53B8RkhMecEV5AjB4VUzf3KeiYqz3OkW7ftuZD8DH/SbAx99NlorvvTjiZjBCTEWIyQkxGzjGLogCLNaQ1Zp7n4CjLMnNMcGf8bg7urH90YLiP/SeEaZq2R/0dU9ELr6fqbPumZGIAAAAASUVORK5CYII=" InformativeScreenshot="1736e8cacc83d00e8258e9eac4a6773f.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='ThunderRT5Form' title='Datos Generales' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mensaje del Servidor" sap:VirtualizedContainerService.HintSize="434,548" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,259" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="323, 107, 75, 23" ElementType="Button" FriendlyName="'Aceptar'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Aceptar' check:text='Aceptar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVGhD7ZbbsYQgDECtinryayW04T+90IQN2EGWgCwPkX3EZa534sz5IMng5hh0p23bUPgOkcfgKU+u9655ntvy1nUVOizL0pcX18IRkcdA5DEQeQxEHoNx8qxGNSnUtpFjYxB+tvc5w+RZrRAAUGnbzPP41/IsagVoqEml0RY5anzCiQDzIuYEaQhxB5iq1hEeDt2vjqU9ABROh9/xOWPk0ZHdJRiITQdonQSlWKghCXGidkmx1pBEeiAxdzZ5lMvrcpk8hsgrhFHT9TQVTe+SMtKE5bX5urGPlxv36NQxGCDvKKM/MWcN1vF8XeVI3PNYduqY/F5eMWmB8ljWx6gVI6jxFKcPUFuQI7+nn8CbyqvfcZ5CaJDiJzLG/N+a9pT6l72PlxL8u9PFg9x8T8iE3UzedVzb+BWIPAY3kvf3EHkMRB4DkcegK4+SQp+mPAoK73GQJ3yOyPuaDR8UgMNEB+2uSwAAAABJRU5ErkJggg==" InformativeScreenshot="abdf6f8f44026fbfb8900e58880a599f.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='#32770' title='Mensaje del Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Aceptar" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp FilePath="C:\Cobis3\Conta\cobconta.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVFhH7ZEBDoMwDAN5Ok/jZ6xuE3ADWaCMIk2cZHVLk9jdhpd/Y5azOzCegXzuxmLMSP0SusRbluvMOI5ZivScplo8TVOW1EF1D6wxI/0h2ihjNRwCp+IZ27rsDslDOPfwQjBeIIA5mEQ0hfCMbR1zMIloCsF4gQDmYBLRFMIztnXMwSSiKQTjBQKYg0lEU4gDxqpDNIWw4F536b6kQyyDOBm9Y9kQWldjEwAKSU1lkRncXcq/iNcjOkxqRoD9F3vyjZc9p5DBovWFHKyc3425P+sUtMALsQbQ7+Wu7hE1IYuKvBC2T2smXDOytGgbglUb/yoAEIOi6O9QoW/tvS3E/cZMWra+uqcxswnQy5jJRk8YM48Zv1xkGD5MQ1l5SSOIwgAAAABJRU5ErkJggg==" InformativeScreenshot="5d096b5ad11ed78073e8bed4aac6fa1b.png" Selector="&lt;wnd app='cobconta.exe' cls='#32770' title='Mensaje del Servidor'/&gt;" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 31, 82, 19" FriendlyName="'Contabilidad'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='1' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Contabilidad' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Aplicación' role='menu bar' /&gt;&lt;ctrl name='Contabilidad' role='menu item' automationid='' check:text='Contabilidad' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAXCAYAAACRUrg+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVFhH7ZbbjcQgDEWnYeqgDdqgjHSRzygNeDGQYBMgZBXPfqyPhMTTvlwIMx9QRFBjhVBjhVBjhVBjhVBjhVBjhXho7AreGjAmF+tDzzdYwBkLvpVs9WDPMTKP9dcM4nV5tmbe2CjUgFtyGwl9nrYfMyv2r+ZRRIxNN5WZ+gr/3dh4W10IPSDf6OOZKIeQBXl3jtmoDvvLfJMXLO7ad8ZYSo4Ug4zFZq8eIPqs92ysnTMwWHPHvLHD9zSZdGqKgugGieAFDT4Oqdo8ozYpxDg0XOLP1Iu+1dug4Rij/GZNm3dubGMcb0ESRcUitfhKbDQ+357BvHb8Tv1yMap4rZx3a2545419y1gWB3N25jE9vXikPjKpl/M7xgbyqTJzQ/L0rwCTkjEmthZE29UY5uh+7uRd7cYf1Ys+9lnf5GyumWDeWCQmPj6ZUOiJsjEqgG4Q4e3zhyPuIN3EFNuBq26sc7i5NF4OmMbr1bFZPnf+Q9TLGeiuueeZsco0aqwQaqwQaqwQn33fQcv75bNtG2h5v+hTIALAD4mIclmgyY6JAAAAAElFTkSuQmCC" InformativeScreenshot="a76d30a3d297df49e9b4643ad518f014.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='ThunderRT5MDIForm' title='COBI$ - CONTABILIDAD 3.2.4' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Contabilidad" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 98, 210, 22" FriendlyName="'Transacciones'" FullSelectorArgument="&lt;ctrl name='Contabilidad' role='popup menu' /&gt;&lt;ctrl name='Transacciones' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Contabilidad' role='popup menu' /&gt;&lt;ctrl name='Transacciones' role='menu item' automationid='' check:text='Transacciones' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANYAAAAaCAYAAADLyaLhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHzSURBVHhe7dfNjYMwEAVgmuKaNnK1UkAKSAP0ElFLuKeAnBENzDJ2TDCeIRHKsLD7Dp8E+IeJ5Bebous6Ym3briq+F+AvQrAADCBYAAYQLAADCBaAAQQLwACCBWAAwQIwsJlg1a6gosiVVZP13YymorIoqWqENvjXNrhj1eSwWOGX3W43Oh6P9Hg8xPZ3ECwAxeVyWRyujQcrXDtX9sdCR3XfnhwZXZ2OqZxwhGyoKl9jXB3eI8+j95efT/4E/NFQGjtX33Rc+J16HbCmpeHaQbC076y83xCQmhfwc4HydRKcqfE8YTHn79Oe5zUMAUi+v2bqS+YIbf49b+uGtZxOJzqfz2KbZhc71rDomF+U8Z9c6ze6f+4GWSikeXzfuOBHtOfZe9I+vCuKO5tQ36uWHgdKqxtWdb1e6XA4+G8uqV2zr2Ali5d3EaVfdt9RU/Fx8rnQtXmEcHja8ywgS4MlzR0kdQvtYGdpqNi+gsW7TFlRw9d+QSr9svuAF+lwzBLn+fZRMAZmrr4wbm5nGuoW2sAGh2lpqNjOjoJhgfvjUunIfbJjJUe+uNC1eeLY2H+8U0jPJ+/1YYp9lHqk+2Rcj4+CYt2wpvv9Lj7/xAaDBbB/CBaAAQQLwACCBWAAwQIwgGABGECwAAwgWAAGECyAr+voB5otRnAoUYXOAAAAAElFTkSuQmCC" InformativeScreenshot="f14b3edd302833a8af32a4ef64f96e5f.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Transacciones" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 237, 283, 22" FriendlyName="'Estado de Cuenta'" FullSelectorArgument="&lt;ctrl name='Transacciones' role='popup menu' /&gt;&lt;ctrl automationid='53' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Transacciones' role='popup menu' /&gt;&lt;ctrl automationid='53' role='menu item' check:text='Estado de Cuenta' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAR8AAAAaCAYAAACO7VhKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIqSURBVHhe7dndkYMgFIbhNGU/dEMz9mIrGRtgQcEcENHsujk6eS+eCwWPPzN8AfIYx9EFz+fzo9J9AXwnwgeACsIHgArCB4AKwgeACsIHgArCB4AKwgeAiguFT+/M4+EegunLPn8V7tE5O9TajvptjcHZTrxfZ91Q7Qd8h4uFz9FB/dsAUAqfwbquDFN/zp4ersEZ7wj8P8Lnbe/WmGc858/ithA+uIcbhE++XDF96CeWL6af+vVmfW4SZx3hfGdtfg/RFmwGxOEaxvXVayvnF+V7F8fV+rGPNfF8eK4hnk99vb1vAyi68J5PHGi9H2CrAVMO2K22uWYKlcF2vm69bR7ktZp7NcQ1/lnnEIjHQajb3N8pamTHW/XnZ1q+S/hGZTAt9aRWG/BZ15/5xF/+fFBX+k4DMAVXbFsNfHHdVDefkYQZwmr2s1sj3TMqg7Jyn1z5LkfqN65ZtXm1b5PaACW32fOZZxwpHIq+2QAPy7TYthscZ4RPK1iCvT2f8r2P1G9cU7ZlNcS3WWoBOm614RwC6LXsEH3DL3sKiGmwyYHYWjKJUGgO9HaN1VKrFGceWQD5+83/dhXhNPXdqx/Oi/fPjou2zW8D6Lrwnk8cdNmS4RUOyybqtAwRm9KdcUb+uovr25vFjUF5uIa32p/a6CdnU/IdjX/+3fqt8Hnj2wCKLhQ+AL4J4QNABeEDQAXhA0AF4QNABeEDQAXhA0AF4QNABeEDQMHofgB3HTHNg9QFxwAAAABJRU5ErkJggg==" InformativeScreenshot="de890ed622acdf4052c4821d546d8ef3.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Estado de Cuenta" TextMethod="AttributeText" TextSelector="&lt;ctrl role='menu item' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BusquedaContable workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Contabilidad\BusquedaContable.XAML">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="Oficina">
+                  <Literal x:TypeArguments="x:String">917</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Area">
+                  <Literal x:TypeArguments="x:String">1</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Auxiliar">
+                  <Literal x:TypeArguments="x:String">060113</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Fecha">
+                  <Literal x:TypeArguments="x:String">13022021</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Cuenta">
+                  <Literal x:TypeArguments="x:String">30510501</Literal>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp FilePath="C:\Cobis3\Conta\cobconta.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVFhH7ZEBDoMwDAN5Ok/jZ6xuE3ADWaCMIk2cZHVLk9jdhpd/Y5azOzCegXzuxmLMSP0SusRbluvMOI5ZivScplo8TVOW1EF1D6wxI/0h2ihjNRwCp+IZ27rsDslDOPfwQjBeIIA5mEQ0hfCMbR1zMIloCsF4gQDmYBLRFMIztnXMwSSiKQTjBQKYg0lEU4gDxqpDNIWw4F536b6kQyyDOBm9Y9kQWldjEwAKSU1lkRncXcq/iNcjOkxqRoD9F3vyjZc9p5DBovWFHKyc3425P+sUtMALsQbQ7+Wu7hE1IYuKvBC2T2smXDOytGgbglUb/yoAEIOi6O9QoW/tvS3E/cZMWra+uqcxswnQy5jJRk8YM48Zv1xkGD5MQ1l5SSOIwgAAAABJRU5ErkJggg==" InformativeScreenshot="d57055e8af9e78d7b16c07d408b3c5a9.png" Selector="&lt;wnd app='cobconta.exe' cls='ThunderRT5MDIForm' title='COBI$ - CONTABILIDAD 3.2.4'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
