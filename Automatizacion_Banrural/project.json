@@ -120,6 +120,12 @@
       "uniqueId": "3c2636f4-c040-425c-81cc-3b546aa865b4",
       "input": [],
       "output": []
+    },
+    {
+      "filePath": "Modulo Gerencial\\Login Gerencial.xaml",
+      "uniqueId": "e34538dd-9315-4a80-b020-8be8021082ba",
+      "input": [],
+      "output": []
     }
   ],
   "isTemplate": false,

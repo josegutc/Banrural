@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,2422</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192,2017</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -84,7 +84,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="598,2237" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="598,1872" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Nombre" />
       <Variable x:TypeArguments="x:String" Name="Monto" />
@@ -109,7 +109,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="457,261" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="556,261" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
@@ -121,7 +121,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LoginPortalAsistencia workflow" sap:VirtualizedContainerService.HintSize="457,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PortalAsistencia\LoginPortalAsistencia.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LoginPortalAsistencia workflow" sap:VirtualizedContainerService.HintSize="556,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PortalAsistencia\LoginPortalAsistencia.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
@@ -155,18 +155,42 @@
     </ui:CommentOut>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Lectura Cuadro Amarillo Pruebas" sap:VirtualizedContainerService.HintSize="556,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="PortalAsistencia\GestionLecturaCuadroAmarillo.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="Codigo">5442736</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Nombre">[Nombre]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Monto">[Monto]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Escenario">[Escenario]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="NumReferencia">[NumReferencia]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Cuenta">[Cuenta]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Empresa">[Empresa]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Year">[Year]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Mes">[Mes]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Dia">[Dia]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Fecha">[Fecha]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Oficina">[Oficina]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Codigo">
+          <Literal x:TypeArguments="x:String" xml:space="preserve">5495520 </Literal>
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Nombre">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Nombre" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Monto">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Monto" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Escenario">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Escenario" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="NumReferencia">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="NumReferencia" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Cuenta">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Cuenta" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Empresa">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Empresa" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Year">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Year" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Mes">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Mes" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Dia">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Dia" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Fecha">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Fecha" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Oficina">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Oficina" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NombresEmpresasContraCobis workflow" sap:VirtualizedContainerService.HintSize="556,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Modulo Gerencial\NombresEmpresasContraCobis.xaml">
@@ -181,7 +205,7 @@
         <OutArgument x:TypeArguments="x:String" x:Key="NomEmpresa">[EmpresaCOBIS]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[Oficina = &quot;948&quot;]" sap:VirtualizedContainerService.HintSize="556,352" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="False" sap:VirtualizedContainerService.HintSize="556,352" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
@@ -191,12 +215,8 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Login Tadmin workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Tadmin\Login Tadmin.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="Cuenta">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Cuenta" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Fecha">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Fecha" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Cuenta">[Cuenta]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Fecha">[Fecha]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
@@ -278,28 +298,45 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="556,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke EditWordSignature workflow" sap:VirtualizedContainerService.HintSize="556,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="EditWordSignature.XAML">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="Agencia">[Oficina]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Cliente">[Nombre]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Carne">[NumReferencia]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Boleta">[Factura]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Dia">[Dia]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Mes">[Mes]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Anio">[Year]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Monto">[Monto]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Empresa">[EmpresaCOBIS]</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LoginPortalAsistencia workflow" sap:VirtualizedContainerService.HintSize="556,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="PortalAsistencia\LoginPortalAsistencia.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SubidaDocumentoCertificacion workflow" sap:VirtualizedContainerService.HintSize="556,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="PortalAsistencia\SubidaDocumentoCertificacion.XAML">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="Codigo">5442736</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="556,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="421,508" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke EditWordSignature workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="EditWordSignature.XAML">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="Agencia">[Oficina]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Cliente">[Nombre]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Carne">[NumReferencia]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Boleta">[Factura]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Dia">[Dia]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Mes">[Mes]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Anio">[Year]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Monto">[Monto]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Empresa">[EmpresaCOBIS]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LoginPortalAsistencia workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="PortalAsistencia\LoginPortalAsistencia.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SubidaDocumentoCertificacion workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="PortalAsistencia\SubidaDocumentoCertificacion.XAML">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="Codigo">5442736</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
   </Sequence>
 </Activity>

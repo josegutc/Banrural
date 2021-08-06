@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ContabilidadLogin" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1192,3636" sap2010:WorkflowViewState.IdRef="ContabilidadLogin_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ContabilidadLogin" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1192,3640" sap2010:WorkflowViewState.IdRef="ContabilidadLogin_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -70,19 +70,19 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ContabilidadLogin" sap:VirtualizedContainerService.HintSize="552,3531" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ContabilidadLogin" sap:VirtualizedContainerService.HintSize="552,3535" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: COBI$ - CONTABILIDAD 3.2.4" sap:VirtualizedContainerService.HintSize="510,3439" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: COBI$ - CONTABILIDAD 3.2.4" sap:VirtualizedContainerService.HintSize="510,3443" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="476,3150" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="476,3154" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ss:SecureString" Name="Password" />
             </Sequence.Variables>
@@ -112,13 +112,13 @@
                 <uix:TargetAnchorable DesignTimeRectangle="250, 34, 79, 25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAdCAYAAADW4FAcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVGhD7dXBDYUgEEVRimVDV5RCLzRAB/6w0BAcEf0vMJJnchYwuLnBaEIIG2EwJtAR01pLL4kx+Tx7nHPtmDFG6uC974uZUqIbjAnEmECMCaQ6pjHmRJpfrUdTG1MKU++V63o2wxIx6/1ZlolZnpuFMYH4mQPxBwS0TExpPZramNkepyTN7/ZGUR3za1TG3G9Xi/TebLyZQIwJxJhAjAnUFTMfoj7NmHlIz1zGpHdOMel/jAkTth8N6bjO8o/lBQAAAABJRU5ErkJggg==" InformativeScreenshot="af4192d0be2098e4986ac5d6e0efb3ad.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='ThunderRT5Form' title='Conexión con el Servidor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Copyright" sap:VirtualizedContainerService.HintSize="434,547" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Copyright" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,13 +141,13 @@
                 <uix:TargetAnchorable DesignTimeRectangle="254, 32, 79, 25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='ThunderRT5CommandButton' title='&amp;amp;OK' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAdCAYAAADW4FAcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVGhD7dpBDkQwGIbhnhUJTlXHaIhwFg7AXvgnTCRiOm1N/lRHvibPoi2bNxULRNu2BNc0TbOp65qqqqKyLEkpRYj5A2vMJEnggjiOKYqijTYmhttYloXmeaY0Tc0x+74Hi67rSErpFnMcRzAYhgExuSAmI8RkFHxMIcQH3f63uU9Bx9SFOa8d5+c93x4T87x+h0fFPF53B8RkhMecEV5AjB4VUzf3KeiYqz3OkW7ftuZD8DH/SbAx99NlorvvTjiZjBCTEWIyQkxGzjGLogCLNaQ1Zp7n4CjLMnNMcGf8bg7urH90YLiP/SeEaZq2R/0dU9ELr6fqbPumZGIAAAAASUVORK5CYII=" InformativeScreenshot="1736e8cacc83d00e8258e9eac4a6773f.png" ScopeSelectorArgument="&lt;wnd app='cobconta.exe' cls='ThunderRT5Form' title='Datos Generales' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mensaje del Servidor" sap:VirtualizedContainerService.HintSize="434,548" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Mensaje del Servidor" sap:VirtualizedContainerService.HintSize="434,549" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,259" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -183,7 +183,7 @@
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BusquedaContable workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Contabilidad\BusquedaContable.XAML">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="Oficina">
-                  <Literal x:TypeArguments="x:String">917</Literal>
+                  <Literal x:TypeArguments="x:String">948</Literal>
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Area">
                   <Literal x:TypeArguments="x:String">1</Literal>
@@ -192,10 +192,10 @@
                   <Literal x:TypeArguments="x:String">060113</Literal>
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Fecha">
-                  <Literal x:TypeArguments="x:String">13022021</Literal>
+                  <Literal x:TypeArguments="x:String">27072021</Literal>
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Cuenta">
-                  <Literal x:TypeArguments="x:String">30510501</Literal>
+                  <Literal x:TypeArguments="x:String">3028260299</Literal>
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
